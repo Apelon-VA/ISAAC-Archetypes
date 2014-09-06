@@ -30,6 +30,14 @@
     <archetypeVersion>${project.version}</archetypeVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <isaac.version>\${isaacVersion}</isaac.version>
+  <!-- for future use
+    <usersGroupId>\${usersGroupId}</usersGroupId>
+    <usersArtifactId>\${usersArtifactId}</usersArtifactId>
+    <usersVersion>\${usersVersion}</usersVersion> 
+    <droolsGroupId>\${droolsGroupId}</droolsGroupId>
+    <droolsArtifactId>\${droolsArtifactId}</droolsArtifactId>
+    <droolsVersion>\${droolsVersion}</droolsVersion> 
+   -->
     <gov.va.isaac.gui.App.title>\${appTitle}</gov.va.isaac.gui.App.title>
     <dbGroupId>\${dbGroupId}</dbGroupId>
     <dbArtifactId>\${dbArtifactId}</dbArtifactId>
