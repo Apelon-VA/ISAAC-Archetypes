@@ -170,10 +170,10 @@
 								<configuration>
 									<artifactItems>
 										<artifactItem>
-											<groupId>gov.va.isaac.db</groupId>
-											<artifactId>solor-snomed-loinc</artifactId>
-											<version>2014.08.19</version>
-											<classifier>bdb</classifier>
+											<groupId>\${dbGroupId}</groupId>
+											<artifactId>\${dbArtifactId}</artifactId>
+											<version>\${dbVersion}</version>
+											<classifier>\${dbClassifier}</classifier>
 											<type>zip</type>
 											<outputDirectory>${project.build.directory}/db</outputDirectory>
 										</artifactItem>

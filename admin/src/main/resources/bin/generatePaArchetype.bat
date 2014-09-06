@@ -12,7 +12,7 @@ set groupId=gov.va.isaac.isaac-pa.vha
 set artifactId=isaac-pa-parent
 set version=1.0-Sprint_13-SNAPSHOT
 
-:: Configuration settings
+:: Project Configuration settings
 set archetypeGroupId=gov.va.isaac.isaac.archetypes
 set archetypeArtifactId=isaac-archetypes-pa
 set archetypeVersion=1.0-Sprint_13-SNAPSHOT
@@ -25,14 +25,20 @@ set distReposUrl=http://va-archiva-host:8082/archiva/repository/va-releases/
 set distReposSnapId=maestro-deploy
 set distReposSnapName=VA Public Snapshots Repository
 set distReposSnapUrl=http://va-archiva-host:8082/archiva/repository/va-snapshots/
-
 :: anticipating the future
 :: set usersGroupId=gov.va.isaac...
-:: set usersArtifactId=gov.va.isaac..
-:: set usersVersion=gov.va.isaac...
+:: set usersArtifactId=
+:: set usersVersion=
 :: set droolsGroupId=gov.va.isaac...
-:: set droolsArtifactId=gov.va.isaac..
-:: set droolsVersion=gov.va.isaac...
+:: set droolsArtifactId=
+:: set droolsVersion=
+
+:: Application configuration settings
+set appTitle=VHA ISAAC App - ISAAC Toolkit (v0.13)
+set dbGroupId=gov.va.isaac.db
+set dbArtifactId=solor-snomed-loinc
+set dbVersion=2014.08.19
+set dbClassifier=bdb
 
 
 echo ----------------------------------------
@@ -59,7 +65,11 @@ echo   distReposSnapUrl = %distReposSnapUrl%
 :: echo droolsGroupId = %droolsGroupId%
 :: echo droolsArtifactId = %droolsArtifactId%
 :: echo droolsVersion = %droolsVersion%
-
+echo   appTitle = %appTitle%
+echo   dbGroupId = %dbGroupId%
+echo   dbArtifactId = %dbArtifactId%
+echo   dbVersion = %dbVersion%
+echo   dbClassifier = %dbClassifier%
 echo   .
 
 :: Generate project
@@ -71,7 +81,7 @@ mvn archetype:generate -B^
  -DarchetypeGroupId=%archetypeGroupId%^
  -DarchetypeArtifactId=%archetypeArtifactId%^
  -DarchetypeVersion=%archetypeVersion%^
- -DisaacVersion=%isaacVersion^
+ -DisaacVersion=%isaacVersion%^
  -DscmConnection=%scmConnection%^
  -DscmUrl=%scmUrl%^
  -DdistReposId=%distReposId%^
@@ -79,8 +89,13 @@ mvn archetype:generate -B^
  -DdistReposUrl=%distReposUrl%^
  -DdistReposSnapId=%distReposSnapId%^
  "-DdistReposSnapName=%distReposSnapName%"^
- -DdistReposSnapUrl=%distReposSnapUrl%
-
+ -DdistReposSnapUrl=%distReposSnapUrl%^
+ "-DappTitle=%appTitle%"^
+ -DdbGroupId=%dbGroupId%^
+ -DdbArtifactId=%dbArtifactId%^
+ -DdbVersion=%dbVersion%^
+ -DdbClassifier=%dbClassifier%
+ 
 :: -DusersGroupId = %usersGroupId%^
 :: -DusersArtifactId = %usersArtifactId%^
 :: -DusersVersion = %usersVersion%^

@@ -16,7 +16,9 @@ the complete set of archetype projects for ISAAC.
     * Revert the archetype.properties file (src/main/test/projects/basic)
   * Remove any files that should be removed, and add any new files
   * Review all changes for correctness and completeness
-
+* The variables in the poms that are to be interpolated at archetype
+  generation time should be escaped with \$ 
+  (see \${groupId} in src/main/resources/archetype-resources/pom.xml)
 
 # Generating an ISAAC-PA project from an archetype
 
