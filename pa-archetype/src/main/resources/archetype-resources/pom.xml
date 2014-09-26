@@ -25,19 +25,55 @@
 	<description>The Maven Parent POM file for the ISAAC project assembly modules.  Declares shared dependencies, sets up the build.</description>
 
 	<properties>
-		<archetypeGroupId>${project.groupId}</archetypeGroupId>
-		<archetypeArtifactId>${project.artifactId}</archetypeArtifactId>
-		<archetypeVersion>${project.version}</archetypeVersion>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Archetype version info -->
+		<archetype.group.id>${project.groupId}</archetype.group.id>
+		<archetype.artifact.id>${project.artifactId}</archetype.artifact.id>
+		<archetype.version>${project.version}</archetype.version>
+
+        <!-- ISAAC software version -->
 		<isaac.version>\${isaacVersion}</isaac.version>
-		<!-- for future use <usersGroupId>\${usersGroupId}</usersGroupId> <usersArtifactId>\${usersArtifactId}</usersArtifactId> 
-			<usersVersion>\${usersVersion}</usersVersion> <droolsGroupId>\${droolsGroupId}</droolsGroupId> 
-			<droolsArtifactId>\${droolsArtifactId}</droolsArtifactId> <droolsVersion>\${droolsVersion}</droolsVersion> -->
-		<gov.va.isaac.gui.App.title>\${appTitle}</gov.va.isaac.gui.App.title>
-		<dbGroupId>\${dbGroupId}</dbGroupId>
-		<dbArtifactId>\${dbArtifactId}</dbArtifactId>
-		<dbVersion>\${dbVersion}</dbVersion>
-		<dbClassifier>\${dbClassifier}</dbClassifier>
+
+        <!-- Repositories for code and artifacts -->
+        <scm.connection>\${scmConnection}</scm.connection>
+        <scmurl>\${scmUrl}</scmurl>
+        <dist.repos.id>\${distReposId}</dist.repos.id>
+        <dist.repos.name>\${distReposName}</dist.repos.name>
+        <dist.repos.url>\${distReposUrl}</dist.repos.url>
+        <dist.repos.snap.id>\${distReposSnapId}</dist.repos.snap.id>
+        <dist.repos.snap.name>\${distReposSnapName}</dist.repos.snap.name>
+        <dist.repos.snap.url>\${distReposSnapUrl}</dist.repos.snap.url>
+
+        <!-- Database version info -->
+		<db.group.id>\${dbGroupId}</db.group.id>
+		<db.artifact.id>\${dbArtifactId}</db.artifact.id>
+		<db.version>\${dbVersion}</db.version>
+		<db.classifier>\${dbClassifier}</db.classifier>
+
+        <!-- Users version info -->
+        <users.group.id>\${usersGroupId}</users.group.id>
+        <users.artifact.id>\${usersArtifactId}</users.artifact.id>
+        <users.version>\${usersVersion}</users.version>
+
+        <!-- Drools version info -->
+        <drools.group.id>\${droolsGroupId}</drools.group.id>
+        <drools.artifact.id>\${droolsArtifactId}</drools.artifact.id>
+        <drools.version>\${droolsVersion}</drools.version>
+        <drools.url>\${droolsUrl}</drools.url>
+
+        <!-- Application properties -->
+        <gov.va.isaac.gui.App.title>\${appTitle}</gov.va.isaac.gui.App.title>
+        <previous.release.version>\${previousReleaseVersion}</previous.release.version>
+        <release.version>\${releaseVersion}</release.version>
+        <extension.namespace>\${extensionNamespace}</extension.namespace>
+        <change.set.url>\${changeSetUrl}</change.set.url>
+        <default.edit.path.name>\${defaultEditPathName}</default.edit.path.name>
+        <default.edit.path.uuid>\${defaultEditPathUuid}</default.edit.path.uuid>
+        <default.view.path.name>\${defaultViewPathName}</default.view.path.name>
+        <default.view.path.uuid>\${defaultViewPathUuid}</default.view.path.uuid>
+        
+        <!-- Generic project properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 	</properties>
 
 	<scm>
