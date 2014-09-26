@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>gov.va.isaac.isaac.archetypes</groupId>
+    <artifactId>isaac-archetypes-parent</artifactId>
+    <version>1.0-Sprint_14-SNAPSHOT</version>
+  </parent>
+  <artifactId>isaac-archetypes-admin</artifactId>
+  <packaging>pom</packaging>
+
+  <name>ISAAC Archetypes Admin</name>
+  <description>ISAAC Archetypes Admin</description>
+  <url>https://csfe.aceworkspace.net/sf/projects/veterans_administration_project/</url>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>Copyright Notice
+    This is a work of the U.S. Government and is not subject to copyright
+    protection in the United States. Foreign copyrights may apply.
+</comments>
+    </license>
+  </licenses>
+
+  <build>
+    <plugins>
+
+      <!-- Assemble admin tools zip file -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>truezip-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-to-zip</id>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <phase>process-resources</phase>
+            <configuration>
+              <fileset>
+                <directory>src/main/resources</directory>
+                <outputDirectory>${project.build.directory}/${project.build.finalName}.zip</outputDirectory>
+              </fileset>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Atttach zip file as an artifact -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>${project.build.directory}/${project.build.finalName}.zip</file>
+                  <type>zip</type>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

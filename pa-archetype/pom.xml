@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>gov.va.isaac.isaac.archetypes</groupId>
+    <artifactId>isaac-archetypes-parent</artifactId>
+    <version>1.0-Sprint_14-SNAPSHOT</version>
+  </parent>
+  <artifactId>isaac-archetypes-pa</artifactId>
+  <packaging>maven-archetype</packaging>
+
+  <name>ISAAC Project Assembly Archetype</name>
+  <description>ISAAC project assembly archetype</description>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <!-- Filter archetype-resources/pom.xml, and nothing else. That file contains 
+      properties we wish to be interpolated when this archetype is built, namely the archetype 
+      groupId, artifactId, version. All other properties must be escaped so that they do 
+      not get interpolated when the archetype is built. Once built, projects generated 
+      from this archetype will automatically contain those properties as hard-coded values. 
+      This allows us to embed the archetype version information in the projects that it 
+      generates. -->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>archetype-resources/pom.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+        <excludes>
+          <exclude>archetype-resources/pom.xml</exclude>
+        </excludes>
+      </resource>
+    </resources>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <!-- Version inherited. -->
+          <configuration>
+            <escapeString>\</escapeString>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

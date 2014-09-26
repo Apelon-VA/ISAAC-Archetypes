@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="isaac-pa-parent"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- This should correspond with properties used at the
+       top level pom of archetype-resources -->
+  <requiredProperties>
+    <requiredProperty key="isaacVersion" />
+    <requiredProperty key="scmConnection" />
+    <requiredProperty key="scmUrl" />
+    <requiredProperty key="distReposId" />
+    <requiredProperty key="distReposName" />
+    <requiredProperty key="distReposUrl" />
+    <requiredProperty key="distReposSnapId" />
+    <requiredProperty key="distReposSnapName" />
+    <requiredProperty key="distReposSnapUrl" />
+  <!-- 
+    <requiredProperty key="usersGroupId" />  
+    <requiredProperty key="usersArtifactId" />  
+    <requiredProperty key="usersVersion" />  
+    <requiredProperty key="droolsGroupId" />  
+    <requiredProperty key="droolsArtifactId" />  
+    <requiredProperty key="droolsVersion" />  
+   -->
+    <requiredProperty key="appTitle" />
+    <requiredProperty key="dbGroupId" />  
+    <requiredProperty key="dbArtifactId" />  
+    <requiredProperty key="dbVersion" />  
+    <requiredProperty key="dbClassifier" />  
+  </requiredProperties>
+
+  <fileSets>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.gitignore</include>
+        <include>LICENSE</include>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <modules>
+    <module id="config" dir="config" name="config">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.properties</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="app" dir="app" name="app">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/assembly</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/scripts</directory>
+          <includes>
+            <include>**/*.bat</include>
+            <include>**/*.sh</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.png</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/install4j</directory>
+          <includes>
+            <include>**/*.install4j</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
+</archetype-descriptor>
