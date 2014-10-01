@@ -1,6 +1,6 @@
-ISAAC-PA
-========
+${groupId}
+========--
 
-Project for assembling a (branded) ISAAC application.  Use the `master` branch as a template.
+Project for assembling the ISAAC application.  
 
-To create custom branding, simply create a branch from `master` and edit the `app.properties` file in the `config` project.  Change desired properties and build ISAAC-PA as usual.
+See the top level pom of the generated project for all configuration settings.s
