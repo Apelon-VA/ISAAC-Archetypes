@@ -70,6 +70,7 @@
         <default.edit.path.uuid>\${defaultEditPathUuid}</default.edit.path.uuid>
         <default.view.path.name>\${defaultViewPathName}</default.view.path.name>
         <default.view.path.uuid>\${defaultViewPathUuid}</default.view.path.uuid>
+        <user.schema.location>\${userSchemaLocation}</user.schema.location>
         
         <!-- Generic project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

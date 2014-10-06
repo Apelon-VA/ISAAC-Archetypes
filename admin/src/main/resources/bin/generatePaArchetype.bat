@@ -8,17 +8,17 @@
 ::
 
 :: Artifact to generate project for
-set groupId=gov.va.isaac.isaac-pa.vha
+set groupId=gov.va.isaac.isaac-pa
 set artifactId=isaac-pa-parent
-set version=1.0-Sprint_13-SNAPSHOT
+set version=1.0-Sprint_14-SNAPSHOT
 
 :: Archetype version info
 set archetypeGroupId=gov.va.isaac.isaac.archetypes
 set archetypeArtifactId=isaac-archetypes-pa
-set archetypeVersion=1.0-Sprint_13-SNAPSHOT
+set archetypeVersion=1.0-Sprint_14-SNAPSHOT
 
 :: ISAAC software version
-set isaacVersion=1.0-Sprint_13-SNAPSHOT
+set isaacVersion=1.0-Sprint_14-SNAPSHOT
 
 :: Repositories for code and artifacts
 set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA.git
@@ -48,7 +48,7 @@ set droolsVersion=0.0.1-SNAPSHOT
 set droolsUrl=http://mgr.servers.aceworkspace.net:50002/drools-guvnor/org.drools.guvnor.Guvnor/package/varelease/varelease
 
 :: Application properties
-set appTitle=VHA ISAAC App - ISAAC Toolkit (v0.13)
+set appTitle=VHA ISAAC App - ISAAC Toolkit (v0.14)
 set previousReleaseVersion=20140731
 set releaseVersion=20150131
 set extensionNamespace=1000???
@@ -57,6 +57,7 @@ set defaultEditPathName=ISAAC development path
 set defaultEditPathUuid=f5c0a264-15af-5b94-a964-bb912ea5634f
 set defaultViewPathName=ISAAC development path
 set defaultViewPathUuid=f5c0a264-15af-5b94-a964-bb912ea5634f
+set userSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/otf-util/src/main/resources/xsd/UserGenerationSchema.xsd
 
 echo ----------------------------------------
 echo Starting ...
@@ -96,6 +97,7 @@ echo   defaultEditPathName = %defaultEditPathName%
 echo   defaultEditPathUuid = %defaultEditPathUuid%
 echo   defaultViewPathName = %defaultViewPathName%
 echo   defaultViewPathUuid = %defaultViewPathUuid%
+echo   userSchemaLocation = %userSchemaLocation%
 echo   .
 
 :: Generate project
@@ -135,7 +137,8 @@ mvn archetype:generate -B^
  "-DdefaultEditPathName=%defaultEditPathName%"^
  "-DdefaultEditPathUuid=%defaultEditPathUuid%"^
  "-DdefaultViewPathName=%defaultViewPathName%"^
- "-DdefaultViewPathUuid=%defaultViewPathUuid%"
+ "-DdefaultViewPathUuid=%defaultViewPathUuid%"^
+ "-DuserSchemaLocation=%userSchemaLocation%"
 
 echo ----------------------------------------
 echo Finished ...
