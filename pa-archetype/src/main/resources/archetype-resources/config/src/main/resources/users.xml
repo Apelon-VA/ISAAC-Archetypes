@@ -15,7 +15,6 @@
        * inferred
        * inferredThenStated
        * stated
-       * statedThenInferred
    -->
   <newUserDefaults>
     <statedInferredPolicy>inferredThenStated</statedInferredPolicy>

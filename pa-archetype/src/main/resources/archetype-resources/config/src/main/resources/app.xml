@@ -10,51 +10,49 @@
   xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/isaac-app/src/main/resources/xsd/AppConfigSchema.xsd">
 
   <!-- Archetype properties -->
-  <archetype.group.id>${archetype.group.id}</archetype.group.id>
-  <archetype.artifact.id>${archetype.artifact.id}</archetype.artifact.id>
-  <archetype.version>${archetype.version}</archetype.version>
+  <archetypeGroupId>${archetype.group.id}</archetypeGroupId>
+  <archetypeArtifactId>${archetype.artifact.id}
+  <archetypeVersion>${archetype.version}
 
   <!-- ISAAC software version -->
-  <isaac.version>${isaac.version}</isaac.version>
+  <isaacVersion>${isaac.version}</isaacVersion>
 
   <!-- Repositories for code and artifacts -->
-  <scm.connection>${scm.connection}</scm.connection>
-  <scm.url>${scm.url}</scm.url>
-  <dist.repos.id>${dist.repos.id}</dist.repos.id>
-  <dist.repos.name>${dist.repos.name}</dist.repos.name>
-  <dist.repos.url>${dist.repos.url}</dist.repos.url>
-  <dist.repos.snapId>${dist.repos.snapId}</dist.repos.snapId>
-  <dist.repos.snap.name>${dist.repos.snap.name}</dist.repos.snap.name>
-  <dist.repos.snap.url>${dist.repos.snap.url}</dist.repos.snap.url>
+  <scmConnection>${scm.connection}</scmConnection>
+  <scmUrl>${scm.url}</scmUrl>
+  <distReposId>${dist.repos.id}</distReposId>
+  <distReposName>${dist.repos.name}</distReposName>
+  <distReposUrl>${dist.repos.url}</distReposUrl>
+  <distReposSnapId>${dist.repos.snapId}</distReposSnapId>
+  <distReposSnap.name>${dist.repos.snap.name}</distReposSnap.name>
+  <distReposSnap.url>${dist.repos.snap.url}</distReposSnap.url>
 
   <!-- Database version info -->
-  <db.group.id>${db.group.id}</db.group.id>
-  <db.artifact.id>${db.artifact.id}</db.artifact.id>
-  <db.version>${db.version}</db.version>
-  <db.classifier>${db.classifier}</db.classifier>
-
-  <!-- Users version info -->
-  <users.group.id>${users.group.id}</users.group.id>
-  <users.artifact.id>${users.artifact.id}</users.artifact.id>
-  <users.version>${users.version}</users.version>
+  <dbGroupId>${db.group.id}</dbGroupId>
+  <dbArtifactId>${db.artifact.id}</dbArtifactId>
+  <dbVersion>${db.version}</dbVersion>
+  <dbClassifier>${db.classifier}</dbClassifier>
 
   <!-- Drools version info -->
-  <drools.group.id>${drools.group.id}</drools.group.id>
-  <drools.artifactid>${drools.artifactid}</drools.artifactid>
-  <drools.version>${drools.version}</drools.version>
-  <drools.url>${drools.url}</drools.url>
+  <droolsGroupId>${drools.group.id}</droolsGroupId>
+  <droolsArtifactid>${drools.artifactid}</droolsArtifactid>
+  <droolsVersion>${drools.version}</droolsVersion>
+  <droolsUrl>${drools.url}</droolsUrl>
 
   <!-- Application properties -->
   <applicationTitle>${gov.va.isaac.gui.App.title}</applicationTitle>
-  <previous.release.version>${previous.release.version}</previous.release.version>
-  <release.version>${release.version}</release.version>
-  <extension.namespace>${extension.namespace}</extension.namespace>
-  <change.set.url><${change.set.url}</change.set.url>
-  <default.edit.path.name>${default.edit.path.name}</default.edit.path.name>
-  <default.edit.path.uuid>${default.view.path.uuid}</default.edit.path.uuid>
-  <default.view.path.name>${default.edit.path.name}</default.view.path.name>
-  <default.view.path.uuid>${default.view.path.uuid}</default.view.path.uuid>
-  <user.schema.location>${user.schema.location}</user.schema.location>
+  <previousReleaseVersion>${previous.release.version}</previousReleaseVersion>
+  <releaseVersion>${release.version}</releaseVersion>
+  <extensionNamespace>${extension.namespace}</extensionNamespace>
+  <changeSetUrl><${change.set.url}</changeSetUrl>
+  <defaultEditPathName>${default.edit.path.name}</defaultEditPathName>
+  <defaultEditPathUuid>${default.view.path.uuid}</defaultEditPathUuid>
+  <defaultViewPathName>${default.edit.path.name}</defaultViewPathName>
+  <defaultViewPathUuid>${default.view.path.uuid}</defaultViewPathUuid>
+  <userSchemaLocation>${user.schema.location}</userSchemaLocation>
+  <workflowServerUrl>${workflow.server.url}</workflowServerUrl>
+  <workflowServerDeploymentId>${workflow.server.deployment.id}</workflowServerDeploymentId>
+  <promotionPath>${promotion.path}</promotionPath>
 
 </isaacAppConfig>
 	

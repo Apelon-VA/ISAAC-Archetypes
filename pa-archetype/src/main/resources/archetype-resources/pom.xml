@@ -71,29 +71,32 @@
         <default.view.path.name>\${defaultViewPathName}</default.view.path.name>
         <default.view.path.uuid>\${defaultViewPathUuid}</default.view.path.uuid>
         <user.schema.location>\${userSchemaLocation}</user.schema.location>
-        
+        <worfklow.server.url>\${workflowServerUrl}</worfklow.server.url>
+        <worfklow.server.deployment.id>\${workflowServerDeploymentId}</worfklow.server.deployment.id>
+        <promotion.path>\${promotionPath}</promotion.path>
+
         <!-- Generic project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 	</properties>
 
 	<scm>
-		<connection>\${scmConnection}</connection>
-		<developerConnection>\${scmConnection}</developerConnection>
-		<url>\${scmUrl}</url>
+		<connection>${scm.connection}</connection>
+		<developerConnection>${scm.connection}</developerConnection>
+		<url>${scm.url}</url>
 	</scm>
 	<distributionManagement>
 		<!-- I don't normally define these here, but the -D overrides are being problematic 
 			on the CI server... -->
 		<repository>
-			<id>\${distReposId}</id>
-			<name>\${distReposName}</name>
-			<url>\${distReposUrl}</url>
+			<id>${dist.repos.id}</id>
+			<name>${dist.repos.name}</name>
+			<url>${dist.repos.url}</url>
 		</repository>
 		<snapshotRepository>
-			<id>\${distReposSnapId}</id>
-			<name>\${distReposSnapName}</name>
-			<url>\${distReposSnapUrl}</url>
+			<id>${dist.repos.snap.id}</id>
+			<name>${dist.repos.snap.name}</name>
+			<url>${dist.repos.snap.url}</url>
 		</snapshotRepository>
 	</distributionManagement>
 

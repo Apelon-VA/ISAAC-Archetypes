@@ -48,6 +48,11 @@
     <requiredProperty key="defaultViewPathName" />
     <requiredProperty key="defaultViewPathUuid" />
     <requiredProperty key="userSchemaLocation" />
+
+    <requiredProperty key="workflowServerUrl" />
+    <requiredProperty key="workflowServerDeploymentId" />
+    <requiredProperty key="promotionPath" />
+
   </requiredProperties>
 
   <fileSets>

@@ -10,3 +10,6 @@ To add a new variable to this archetype, do so in the following 5 places
 * archetype-metadata.xml
 * generatePaArchetype.bat
 * archetype.properties
+
+Also, need to edit the XML schema for app.xml
+* isaac-app/src/main/resources/xsd/AppConfigSchema.xsd

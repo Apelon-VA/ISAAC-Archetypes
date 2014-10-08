@@ -58,6 +58,9 @@ set defaultEditPathUuid=f5c0a264-15af-5b94-a964-bb912ea5634f
 set defaultViewPathName=ISAAC development path
 set defaultViewPathUuid=f5c0a264-15af-5b94-a964-bb912ea5634f
 set userSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/otf-util/src/main/resources/xsd/UserGenerationSchema.xsd
+set workflowServerUrl=https://www.example.com
+set workflowServerDeploymentId=12345
+set promotionPath=f5c0a264-15af-5b94-a964-bb912ea5634f
 
 echo ----------------------------------------
 echo Starting ...
@@ -98,6 +101,9 @@ echo   defaultEditPathUuid = %defaultEditPathUuid%
 echo   defaultViewPathName = %defaultViewPathName%
 echo   defaultViewPathUuid = %defaultViewPathUuid%
 echo   userSchemaLocation = %userSchemaLocation%
+echo   workflowServerUrl = %workflowServerUrl%
+echo   workflowServerDeploymentId = %workflowServerDeploymentId%
+echo   promotionPath = %promotionPath%
 echo   .
 
 :: Generate project
@@ -138,7 +144,10 @@ mvn archetype:generate -B^
  "-DdefaultEditPathUuid=%defaultEditPathUuid%"^
  "-DdefaultViewPathName=%defaultViewPathName%"^
  "-DdefaultViewPathUuid=%defaultViewPathUuid%"^
- "-DuserSchemaLocation=%userSchemaLocation%"
+ "-DuserSchemaLocation=%userSchemaLocation%"^
+ "-DworkflowServerUrl=%workflowServerUrl%"^
+ "-DworkflowServerDeploymentId=%workflowServerDeploymentId%"^
+ "-DpromotionPath=%promotionPath%"
 
 echo ----------------------------------------
 echo Finished ...
