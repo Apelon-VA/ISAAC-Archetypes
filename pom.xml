@@ -4,7 +4,7 @@
 
   <groupId>gov.va.isaac.archetypes</groupId>
   <artifactId>isaac-archetypes-parent</artifactId>
-  <version>1.0-Sprint_14-SNAPSHOT</version>
+  <version>1.0-Sprint_14</version>
   <packaging>pom</packaging>
 
   <name>ISAAC Archetypes Parent</name>
