@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>gov.va.isaac.isaac.archetypes</groupId>
+    <groupId>gov.va.isaac.archetypes</groupId>
     <artifactId>isaac-archetypes-parent</artifactId>
-    <version>1.0-Sprint_14-SNAPSHOT</version>
+    <version>1.0-Sprint_15-SNAPSHOT</version>
   </parent>
   <artifactId>isaac-archetypes-admin</artifactId>
   <packaging>pom</packaging>

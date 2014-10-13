@@ -1,0 +1,68 @@
+
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!-- TODO update this so that the version number populates from maven. Also - dynamically 
+  update the schema location path to point to the appropriate tag within github (can 
+  I be clever enough to figure this out from the maven isaac version?) -->
+<isaacAppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="${app.schema.location}">
+
+  <!-- Archetype properties -->
+  <archetypeGroupId>${archetype.group.id}</archetypeGroupId>
+  <archetypeArtifactId>${archetype.artifact.id}
+  <archetypeVersion>${archetype.version}
+
+  <!-- ISAAC software version -->
+  <isaacVersion>${isaac.version}</isaacVersion>
+
+  <!-- Repositories for code and artifacts -->
+  <scmConnection>${scm.connection}</scmConnection>
+  <scmUrl>${scm.url}</scmUrl>
+  <distReposId>${dist.repos.id}</distReposId>
+  <distReposName>${dist.repos.name}</distReposName>
+  <distReposUrl>${dist.repos.url}</distReposUrl>
+  <distReposSnapId>${dist.repos.snapId}</distReposSnapId>
+  <distReposSnap.name>${dist.repos.snap.name}</distReposSnap.name>
+  <distReposSnap.url>${dist.repos.snap.url}</distReposSnap.url>
+
+  <!-- Database version info -->
+  <dbGroupId>${db.group.id}</dbGroupId>
+  <dbArtifactId>${db.artifact.id}</dbArtifactId>
+  <dbVersion>${db.version}</dbVersion>
+  <dbClassifier>${db.classifier}</dbClassifier>
+
+  <!-- Users version info - PLACEHOLDER
+  <usersGroupId>${users.group.id}</usersGroupId>
+  <usersArtifactid>${users.artifactid}</usersArtifactid>
+  <usersVersion>${users.version}</usersVersion>
+   -->
+
+  <!-- Drools version info - PLACEHOLDER
+  <droolsGroupId>${drools.group.id}</droolsGroupId>
+  <droolsArtifactid>${drools.artifactid}</droolsArtifactid>
+  <droolsVersion>${drools.version}</droolsVersion>
+  <droolsUrl>${drools.url}</droolsUrl>
+   -->
+
+  <!-- Application properties -->
+  <applicationTitle>${gov.va.isaac.gui.App.title}</applicationTitle>
+  <previousReleaseVersion>${previous.release.version}</previousReleaseVersion>
+  <releaseVersion>${release.version}</releaseVersion>
+  <extensionNamespace>${extension.namespace}</extensionNamespace>
+  <changeSetUrl><${change.set.url}</changeSetUrl>
+  <appSchemaLocation>${app.schema.location}</appSchemaLocation>
+  <userSchemaLocation>${user.schema.location}</userSchemaLocation>
+  <workflowServerUrl>${workflow.server.url}</workflowServerUrl>
+  <workflowServerDeploymentId>${workflow.server.deployment.id}</workflowServerDeploymentId>
+
+  <!-- Path info -->
+  <defaultEditPathName>${default.edit.path.name}</defaultEditPathName>
+  <defaultEditPathUuid>${default.view.path.uuid}</defaultEditPathUuid>
+  <defaultViewPathName>${default.edit.path.name}</defaultViewPathName>
+  <defaultViewPathUuid>${default.view.path.uuid}</defaultViewPathUuid>
+  <workflowPromotionPathName>${workflow.promotion.path.name}</workflowPromotionPathName>
+  <workflowPromotionPathUuid>${workflow.promotion.path.uuid}</workflowPromotionPathUuid>
+
+</isaacAppConfig>
+	
