@@ -73,7 +73,8 @@
         <user.schema.location>\${userSchemaLocation}</user.schema.location>
         <worfklow.server.url>\${workflowServerUrl}</worfklow.server.url>
         <worfklow.server.deployment.id>\${workflowServerDeploymentId}</worfklow.server.deployment.id>
-        <promotion.path>\${promotionPath}</promotion.path>
+        <workflow.promotion.path.name>\${workflowPromotionPathName}</workflow.promotion.path.name>
+        <workflow.promotion.path.uuid>\${workflowPromotionPathUui}</workflow.promotion.path.uuid>
 
         <!-- Generic project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

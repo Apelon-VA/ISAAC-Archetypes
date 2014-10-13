@@ -48,7 +48,7 @@ set droolsVersion=0.0.1-SNAPSHOT
 set droolsUrl=http://mgr.servers.aceworkspace.net:50002/drools-guvnor/org.drools.guvnor.Guvnor/package/varelease/varelease
 
 :: Application properties
-set appTitle=VHA ISAAC App - ISAAC Toolkit (v0.14)
+set appTitle=VHA CIMI ISAAC App - ISAAC Toolkit (v0.14)
 set previousReleaseVersion=20140731
 set releaseVersion=20150131
 set extensionNamespace=1000???
@@ -60,7 +60,8 @@ set defaultViewPathUuid=f5c0a264-15af-5b94-a964-bb912ea5634f
 set userSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/otf-util/src/main/resources/xsd/UserGenerationSchema.xsd
 set workflowServerUrl=https://www.example.com
 set workflowServerDeploymentId=12345
-set promotionPath=f5c0a264-15af-5b94-a964-bb912ea5634f
+set workflowPromotionPathName=ISAAC release path
+set workflowPromotionPathUuid=f5c0a264-15af-5b94-a964-bb912ea5634f
 
 echo ----------------------------------------
 echo Starting ...

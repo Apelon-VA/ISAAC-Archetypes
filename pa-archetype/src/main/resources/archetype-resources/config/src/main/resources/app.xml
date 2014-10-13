@@ -52,7 +52,8 @@
   <userSchemaLocation>${user.schema.location}</userSchemaLocation>
   <workflowServerUrl>${workflow.server.url}</workflowServerUrl>
   <workflowServerDeploymentId>${workflow.server.deployment.id}</workflowServerDeploymentId>
-  <promotionPath>${promotion.path}</promotionPath>
+  <workflowPromotionPathName>${workflow.promotion.path.name}</workflowPromotionPathName>
+  <workflowPromotionPathUuid>${workflow.promotion.path.uuid}</workflowPromotionPathUuid>
 
 </isaacAppConfig>
 	

@@ -51,7 +51,8 @@
 
     <requiredProperty key="workflowServerUrl" />
     <requiredProperty key="workflowServerDeploymentId" />
-    <requiredProperty key="promotionPath" />
+    <requiredProperty key="workflowPromotionPathName" />
+    <requiredProperty key="workflowPromotionPathUuid" />
 
   </requiredProperties>
 
