@@ -8,9 +8,9 @@
 ::
 
 :: Artifact to generate project for
-set groupId=gov.va.isaac.isaac-pa.vha
-set artifactId=isaac-pa-parent
-set version=1.0-Sprint_14-SNAPSHOT
+set groupId= ... group id of the project to generate ...
+set artifactId= ... artifact id of the project to generate ...
+set version=  ... version of the project to generate ...
 
 :: Archetype version info
 set archetypeGroupId=gov.va.isaac.isaac.archetypes
@@ -89,26 +89,25 @@ echo   dbGroupId = %dbGroupId%
 echo   dbArtifactId = %dbArtifactId%
 echo   dbVersion = %dbVersion%
 echo   dbClassifier = %dbClassifier%
-:: echo   usersGroupId = %usersGroupId%
-:: echo   usersArtifactId = %usersArtifactId%
-:: echo   usersVersion = %usersVersion%
-:: echo   droolsGroupId = %droolsGroupId%
-:: echo   droolsArtifactId = %droolsArtifactId%
-:: echo   droolsVersion = %droolsVersion%
-:: echo   droolsUrl = %droolsUrl%
+echo   usersGroupId = %usersGroupId%
+echo   usersArtifactId = %usersArtifactId%
+echo   usersVersion = %usersVersion%
+echo   droolsGroupId = %droolsGroupId%
+echo   droolsArtifactId = %droolsArtifactId%
+echo   droolsVersion = %droolsVersion%
+echo   droolsUrl = %droolsUrl%
 echo   appTitle = %appTitle%
 echo   previousReleaseVersion = %previousReleaseVersion%
 echo   releaseVersion = %releaseVersion%
 echo   extensionNamespace = %extensionNamespace%
 echo   changeSetUrl = %changeSetUrl%
-echo   appSchemaLocation = %appSchemaLocation%
-echo   userSchemaLocation = %userSchemaLocation%
-echo   workflowServerUrl = %workflowServerUrl%
-echo   workflowServerDeploymentId = %workflowServerDeploymentId%
 echo   defaultEditPathName = %defaultEditPathName%
 echo   defaultEditPathUuid = %defaultEditPathUuid%
 echo   defaultViewPathName = %defaultViewPathName%
 echo   defaultViewPathUuid = %defaultViewPathUuid%
+echo   userSchemaLocation = %userSchemaLocation%
+echo   workflowServerUrl = %workflowServerUrl%
+echo   workflowServerDeploymentId = %workflowServerDeploymentId%
 echo   workflowPromotionPathName = %workflowPromotionPathName%
 echo   workflowPromotionPathUuid = %workflowPromotionPathUuid%
 echo   .
@@ -135,29 +134,27 @@ mvn archetype:generate -B^
  "-DdbArtifactId=%dbArtifactId%"^
  "-DdbVersion=%dbVersion%"^
  "-DdbClassifier=%dbClassifier%"^
+ "-DusersGroupId = %usersGroupId%"^
+ "-DusersArtifactId = %usersArtifactId%"^
+ "-DusersVersion = %usersVersion%"^
+ "-DdroolsGroupId = %droolsGroupId%"^
+ "-DdroolsArtifactId = %droolsArtifactId%"^
+ "-DdroolsVersion = %droolsVersion%"^
+ "-DdroolsUrl = %droolsUrl%"^
  "-DappTitle=%appTitle%"^
  "-DpreviousReleaseVersion=%previousReleaseVersion%"^
  "-DreleaseVersion=%releaseVersion%"^
  "-DextensionNamespace=%extensionNamespace%"^
  "-DchangeSetUrl=%changeSetUrl%"^
- "-DappSchemaLocation=%appSchemaLocation%"^
- "-DuserSchemaLocation=%userSchemaLocation%"^
- "-DworkflowServerUrl=%workflowServerUrl%"^
- "-DworkflowServerDeploymentId=%workflowServerDeploymentId%"^
  "-DdefaultEditPathName=%defaultEditPathName%"^
  "-DdefaultEditPathUuid=%defaultEditPathUuid%"^
  "-DdefaultViewPathName=%defaultViewPathName%"^
  "-DdefaultViewPathUuid=%defaultViewPathUuid%"^
+ "-DuserSchemaLocation=%userSchemaLocation%"^
+ "-DworkflowServerUrl=%workflowServerUrl%"^
+ "-DworkflowServerDeploymentId=%workflowServerDeploymentId%"^
  "-DworkflowPromotionPathName=%workflowPromotionPathName%"^
  "-DworkflowPromotionPathUuid=%workflowPromotionPathUuid%"
-
-:: "-DusersGroupId = %usersGroupId%"^
-:: "-DusersArtifactId = %usersArtifactId%"^
-:: "-DusersVersion = %usersVersion%"^
-:: "-DdroolsGroupId = %droolsGroupId%"^
-:: "-DdroolsArtifactId = %droolsArtifactId%"^
-:: "-DdroolsVersion = %droolsVersion%"^
-:: "-DdroolsUrl = %droolsUrl%"^
 
 echo ----------------------------------------
 echo Finished ...

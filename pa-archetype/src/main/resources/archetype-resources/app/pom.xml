@@ -171,7 +171,7 @@
 									<artifactItems>
 										<artifactItem>
 											<groupId>${db.group.id}</groupId>
-											<artifactId>\${db.artifact.id}</artifactId>
+											<artifactId>${db.artifact.id}</artifactId>
 											<version>${db.version}</version>
 											<classifier>${db.classifier}</classifier>
 											<type>zip</type>

@@ -26,16 +26,18 @@
     <requiredProperty key="dbVersion" />
     <requiredProperty key="dbClassifier" />
 
-    <!-- Users version info -->
+    <!-- Users version info - PLACEHOLDER
     <requiredProperty key="usersGroupId" />
     <requiredProperty key="usersArtifactId" />
     <requiredProperty key="usersVersion" />
-
-    <!-- Drools version info -->
+    -->
+    
+    <!-- Drools version info - PLACEHOLDER
     <requiredProperty key="droolsGroupId" />
     <requiredProperty key="droolsArtifactId" />
     <requiredProperty key="droolsVersion" />
     <requiredProperty key="droolsUrl" />
+    -->
 
     <!-- Application properties -->
     <requiredProperty key="appTitle" />
@@ -43,14 +45,16 @@
     <requiredProperty key="releaseVersion" />
     <requiredProperty key="extensionNamespace" />
     <requiredProperty key="changeSetUrl" />
+    <requiredProperty key="appSchemaLocation" />
+    <requiredProperty key="userSchemaLocation" />
+    <requiredProperty key="workflowServerUrl" />
+    <requiredProperty key="workflowServerDeploymentId" />
+
+    <!-- Path info -->
     <requiredProperty key="defaultEditPathName" />
     <requiredProperty key="defaultEditPathUuid" />
     <requiredProperty key="defaultViewPathName" />
     <requiredProperty key="defaultViewPathUuid" />
-    <requiredProperty key="userSchemaLocation" />
-
-    <requiredProperty key="workflowServerUrl" />
-    <requiredProperty key="workflowServerDeploymentId" />
     <requiredProperty key="workflowPromotionPathName" />
     <requiredProperty key="workflowPromotionPathUuid" />
 
@@ -72,7 +76,7 @@
         <fileSet filtered="true" encoding="UTF-8">
           <directory>src/main/resources</directory>
           <includes>
-            <include>**/*.properties</include>
+            <include>**/*.xml</include>
           </includes>
         </fileSet>
       </fileSets>

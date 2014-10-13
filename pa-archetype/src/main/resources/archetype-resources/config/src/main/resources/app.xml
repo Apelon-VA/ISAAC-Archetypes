@@ -1,13 +1,12 @@
 
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
-#set( $symbol_escape =
-'\' )
+#set( $symbol_escape = '\' )
 <!-- TODO update this so that the version number populates from maven. Also - dynamically 
   update the schema location path to point to the appropriate tag within github (can 
   I be clever enough to figure this out from the maven isaac version?) -->
 <isaacAppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/isaac-app/src/main/resources/xsd/AppConfigSchema.xsd">
+  xsi:noNamespaceSchemaLocation="${app.schema.location}">
 
   <!-- Archetype properties -->
   <archetypeGroupId>${archetype.group.id}</archetypeGroupId>
@@ -33,11 +32,18 @@
   <dbVersion>${db.version}</dbVersion>
   <dbClassifier>${db.classifier}</dbClassifier>
 
-  <!-- Drools version info -->
+  <!-- Users version info - PLACEHOLDER
+  <usersGroupId>${users.group.id}</usersGroupId>
+  <usersArtifactid>${users.artifactid}</usersArtifactid>
+  <usersVersion>${users.version}</usersVersion>
+   -->
+
+  <!-- Drools version info - PLACEHOLDER
   <droolsGroupId>${drools.group.id}</droolsGroupId>
   <droolsArtifactid>${drools.artifactid}</droolsArtifactid>
   <droolsVersion>${drools.version}</droolsVersion>
   <droolsUrl>${drools.url}</droolsUrl>
+   -->
 
   <!-- Application properties -->
   <applicationTitle>${gov.va.isaac.gui.App.title}</applicationTitle>
@@ -45,13 +51,16 @@
   <releaseVersion>${release.version}</releaseVersion>
   <extensionNamespace>${extension.namespace}</extensionNamespace>
   <changeSetUrl><${change.set.url}</changeSetUrl>
+  <appSchemaLocation>${app.schema.location}</appSchemaLocation>
+  <userSchemaLocation>${user.schema.location}</userSchemaLocation>
+  <workflowServerUrl>${workflow.server.url}</workflowServerUrl>
+  <workflowServerDeploymentId>${workflow.server.deployment.id}</workflowServerDeploymentId>
+
+  <!-- Path info -->
   <defaultEditPathName>${default.edit.path.name}</defaultEditPathName>
   <defaultEditPathUuid>${default.view.path.uuid}</defaultEditPathUuid>
   <defaultViewPathName>${default.edit.path.name}</defaultViewPathName>
   <defaultViewPathUuid>${default.view.path.uuid}</defaultViewPathUuid>
-  <userSchemaLocation>${user.schema.location}</userSchemaLocation>
-  <workflowServerUrl>${workflow.server.url}</workflowServerUrl>
-  <workflowServerDeploymentId>${workflow.server.deployment.id}</workflowServerDeploymentId>
   <workflowPromotionPathName>${workflow.promotion.path.name}</workflowPromotionPathName>
   <workflowPromotionPathUuid>${workflow.promotion.path.uuid}</workflowPromotionPathUuid>
 
