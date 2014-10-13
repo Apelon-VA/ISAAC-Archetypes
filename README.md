@@ -46,5 +46,9 @@ the complete set of archetype projects for ISAAC.
 * Run the bin/generateVha.bat script
 ** This produces the isaac-pa-parent project
 * Run this project (with the -Pinstaller profile)
+** Note: for the installer profile to work, you must reference a database
+   that is available through archiva or one that you have built locally. 
+** Otherwise do not use -Pinstaller and instead just install your own
+   berkeley-db folder into the unpacked distribution
 * Unpack app/target/isaac-pa-app*zip into a folder 
 * Launch ISAAC

@@ -13,7 +13,7 @@ set artifactId=isaac-pa-parent
 set version=1.0-Sprint_14-SNAPSHOT
 
 :: Archetype version info
-set archetypeGroupId=gov.va.isaac.isaac.archetypes
+set archetypeGroupId=gov.va.isaac.archetypes
 set archetypeArtifactId=isaac-archetypes-pa
 set archetypeVersion=1.0-Sprint_14-SNAPSHOT
 
