@@ -15,10 +15,10 @@ set version=  ... version of the project to generate ...
 :: Archetype version info
 set archetypeGroupId=gov.va.isaac.archetypes
 set archetypeArtifactId=isaac-archetypes-pa
-set archetypeVersion=1.0-Sprint_14-SNAPSHOT
+set archetypeVersion=1.0-Sprint_14
 
 :: ISAAC software version
-set isaacVersion=1.0-Sprint_14-SNAPSHOT
+set isaacVersion=1.0-Sprint_14
 
 :: Repositories for code and artifacts
 set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA.git
