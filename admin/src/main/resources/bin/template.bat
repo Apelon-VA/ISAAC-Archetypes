@@ -34,7 +34,7 @@ set distReposSnapUrl=http://va-archiva-host:8082/archiva/repository/va-snapshots
 set dbGroupId=gov.va.isaac.db
 set dbArtifactId=solor-all
 set dbVersion=2014.10.13
-set dbClassifier=bdb
+set dbClassifier=active-only
 
 :: Users version info - PLACEHOLDER
 :: set usersGroupId=gov.va.isaac.users
