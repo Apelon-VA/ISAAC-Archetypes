@@ -10,15 +10,15 @@
 :: Artifact to generate project for
 set groupId=gov.va.isaac.isaac-pa.vha-cimi
 set artifactId=isaac-pa-parent
-set version=1.0-Sprint_14-SNAPSHOT
+set version=1.0-Sprint_15-SNAPSHOT
 
 :: Archetype version info
 set archetypeGroupId=gov.va.isaac.archetypes
 set archetypeArtifactId=isaac-archetypes-pa
-set archetypeVersion=1.0-Sprint_14-SNAPSHOT
+set archetypeVersion=1.0-Sprint_15-SNAPSHOT
 
 :: ISAAC software version
-set isaacVersion=1.0-Sprint_14-SNAPSHOT
+set isaacVersion=1.0-Sprint_15-SNAPSHOT
 
 :: Repositories for code and artifacts
 set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA.git
@@ -33,7 +33,7 @@ set distReposSnapUrl=http://va-archiva-host:8082/archiva/repository/va-snapshots
 :: Database version info
 set dbGroupId=gov.va.isaac.db
 set dbArtifactId=solor-all
-set dbVersion=2014.09.14
+set dbVersion=2014.10.23
 set dbClassifier=bdb
 
 :: Users version info - PLACEHOLDER
@@ -48,7 +48,7 @@ set dbClassifier=bdb
 :: set droolsUrl=http://mgr.servers.aceworkspace.net:50002/drools-guvnor/org.drools.guvnor.Guvnor/package/varelease/varelease
 
 :: Application properties
-set appTitle=VHA CIMI ISAAC App - ISAAC Toolkit (v0.14)
+set appTitle=VHA CIMI ISAAC App - ISAAC Toolkit (v0.15)
 set previousReleaseVersion=20140731
 set releaseVersion=20150131
 set extensionNamespace=1000160
