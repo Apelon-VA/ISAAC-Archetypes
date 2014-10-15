@@ -15,7 +15,7 @@
 	<name>ISAAC Application Assembly</name>
 	<description>Assembles specified ISAAC modules and configuration into an application.</description>
 
-	<dependencies>
+	<dependencies> 
 
 		<!-- Configuration module. -->
 		<dependency>
@@ -174,7 +174,7 @@
 											<artifactId>${db.artifact.id}</artifactId>
 											<version>${db.version}</version>
 											<classifier>${db.classifier}</classifier>
-											<type>zip</type>
+											<type>bdb.zip</type>
 											<outputDirectory>${project.build.directory}/db</outputDirectory>
 										</artifactItem>
 									</artifactItems>
