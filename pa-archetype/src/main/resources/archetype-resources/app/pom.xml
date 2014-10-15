@@ -237,7 +237,7 @@
 								</goals>
 								<configuration>
 									<configFile>${project.build.directory}/install4j/Installer.install4j</configFile>
-									<executable>${install4jc.executable}</executable>
+									<executable>${install4j.executable}</executable>
 									<compilerVariables>
 										<property>
 											<name>project.version</name>

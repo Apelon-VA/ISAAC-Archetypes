@@ -21,7 +21,7 @@ set archetypeVersion=1.0-Sprint_15-SNAPSHOT
 set isaacVersion=1.0-Sprint_15-SNAPSHOT
 
 :: Install4j executable
-set install4jExecutable=C:/Program Files/install4j5/bin/install4jc.exe
+set install4jExecutable=C:\\Program Files\\install4j5\\bin\\install4jc.exe
 
 :: Repositories for code and artifacts
 set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA.git
