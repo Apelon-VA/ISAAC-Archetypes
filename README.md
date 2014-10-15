@@ -44,8 +44,8 @@ the complete set of archetype projects for ISAAC.
 * Unpack admin/target/isaac-archetypes-admin*zip file into a folder
 * Edit the bin/generateVha.bat script as desired
 * Run the bin/generateVha.bat script
-** This produces the isaac-pa-parent project
-** Edit the config/src/main/resources/users.xml as desired
+  * This produces the isaac-pa-parent project
+  * Edit the config/src/main/resources/users.xml as desired
 * Build this project
 * Unpack app/target/isaac-pa-app*zip into a folder 
 * Copy a berkeley-db folder build from a 2014.10.23 or later ISAAC-DB project.
