@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${rootArtifactId}</artifactId>
-		<version>${version}</version>
-	</parent>
-	<groupId>${groupId}.modules</groupId>
-	<artifactId>${artifactId}</artifactId>
-	<packaging>jar</packaging>
+    <parent>
+      <groupId>${groupId}</groupId>
+      <artifactId>${rootArtifactId}</artifactId>
+      <version>${version}</version>
+    </parent>
+    <groupId>${groupId}.modules</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <packaging>jar</packaging>
 
 	<name>ISAAC Application Assembly</name>
 	<description>Assembles specified ISAAC modules and configuration into an application.</description>
 
-	<dependencies> 
+	<dependencies>
 
 		<!-- Configuration module. -->
 		<dependency>
-			<groupId>gov.va.isaac.isaac-pa.vha.modules</groupId>
+			<groupId>${groupId}.modules</groupId>
 			<artifactId>config</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
@@ -174,7 +174,7 @@
 											<artifactId>${db.artifact.id}</artifactId>
 											<version>${db.version}</version>
 											<classifier>${db.classifier}</classifier>
-											<type>bdb.zip</type>
+											<type>${db.type}</type>
 											<outputDirectory>${project.build.directory}/db</outputDirectory>
 										</artifactItem>
 									</artifactItems>

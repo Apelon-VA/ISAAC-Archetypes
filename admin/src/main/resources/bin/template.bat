@@ -38,6 +38,7 @@ set dbGroupId=gov.va.isaac.db
 set dbArtifactId=solor-all
 set dbVersion=2014.10.13
 set dbClassifier=active-only
+set dbType=bdb.zip
 
 :: Users version info - PLACEHOLDER
 :: set usersGroupId=gov.va.isaac.users
@@ -93,6 +94,7 @@ echo   dbGroupId = %dbGroupId%
 echo   dbArtifactId = %dbArtifactId%
 echo   dbVersion = %dbVersion%
 echo   dbClassifier = %dbClassifier%
+echo   dbType = %dbType%
 echo   usersGroupId = %usersGroupId%
 echo   usersArtifactId = %usersArtifactId%
 echo   usersVersion = %usersVersion%
@@ -139,6 +141,7 @@ mvn archetype:generate -B^
  "-DdbArtifactId=%dbArtifactId%"^
  "-DdbVersion=%dbVersion%"^
  "-DdbClassifier=%dbClassifier%"^
+ "-DdbType=%dbType%"^
  "-DusersGroupId = %usersGroupId%"^
  "-DusersArtifactId = %usersArtifactId%"^
  "-DusersVersion = %usersVersion%"^

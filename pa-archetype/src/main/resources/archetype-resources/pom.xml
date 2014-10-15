@@ -51,6 +51,7 @@
         <db.artifact.id>\${dbArtifactId}</db.artifact.id>
         <db.version>\${dbVersion}</db.version>
         <db.classifier>\${dbClassifier}</db.classifier>
+        <db.type>\${dbType}</db.type>
 
         <!-- Users version info - PLACEHOLDER
         <users.group.id>\${usersGroupId}</users.group.id>

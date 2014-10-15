@@ -28,6 +28,7 @@
     <requiredProperty key="dbArtifactId" />
     <requiredProperty key="dbVersion" />
     <requiredProperty key="dbClassifier" />
+    <requiredProperty key="dbType" />
 
     <!-- Users version info - PLACEHOLDER
     <requiredProperty key="usersGroupId" />
