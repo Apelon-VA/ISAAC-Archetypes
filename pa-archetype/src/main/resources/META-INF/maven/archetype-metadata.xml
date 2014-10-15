@@ -11,7 +11,7 @@
     <requiredProperty key="isaacVersion" />
 
     <!-- Install4j executable -->
-    <requiredProperty key="install4jExecutable" />
+    <requiredProperty key="install4JExecutable" />
 
     <!-- Repositories for code and artifacts -->
     <requiredProperty key="scmConnection" />

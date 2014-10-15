@@ -21,11 +21,11 @@ set archetypeVersion=1.0-Sprint_15-SNAPSHOT
 set isaacVersion=1.0-Sprint_15-SNAPSHOT
 
 :: Install4j executable
-set install4jExecutable=C:/Program Files/install4j5/bin/install4jc.exe
+set install4JExecutable=C:/Program Files/install4j5/bin/install4jc.exe
 
 :: Repositories for code and artifacts
-set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA.git
-set scmUrl=https://github.com/Apelon-VA/ISAAC-PA-VHA
+set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA-CIMI.git
+set scmUrl=https://github.com/Apelon-VA/ISAAC-PA-VHA-IMI
 set distReposId=maestro-deploy
 set distReposName=VA Public Releases Repository
 set distReposUrl=http://va-archiva-host:8082/archiva/repository/va-releases/
@@ -35,13 +35,13 @@ set distReposSnapUrl=http://va-archiva-host:8082/archiva/repository/va-snapshots
 
 :: Database version info
 set dbGroupId=gov.va.isaac.db
-set dbArtifactId=solor-all
+set dbArtifactId=solor-snomed
 set dbVersion=2014.10.23
 set dbClassifier=active-only
 
 :: Users version info - PLACEHOLDER
 :: set usersGroupId=gov.va.isaac.users
-:: set usersArtifactId=vha-users
+:: set usersArtifactId=vha-cimi-users
 :: set usersVersion=0.0.1-SNAPSHOT
 
 :: Drools version info - PLACEHOLDER
@@ -55,7 +55,7 @@ set appTitle=VHA CIMI ISAAC App - ISAAC Toolkit (v0.15)
 set previousReleaseVersion=20140731
 set releaseVersion=20150131
 set extensionNamespace=1000160
-set changeSetUrl=https://csfe.aceworkspace.net/svn/repos/vhachangesets
+set changeSetUrl=https://csfe.aceworkspace.net/svn/repos/vha-cimi-changesets
 set appSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/isaac-app/src/main/resources/xsd/AppConfigSchema.xsd
 set userSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/otf-util/src/main/resources/xsd/UserGenerationSchema.xsd
 set workflowServerUrl=http://162.243.255.43:8080/kie-wb/
@@ -80,7 +80,7 @@ echo   archetypeGroupId = %archetypeGroupId%
 echo   archetypeArtifactId = %archetypeArtifactId%
 echo   archetypeVersion = %archetypeVersion%
 echo   isaacVersion = %isaacVersion%
-echo   install4jExecutable = %install4jExecutable%
+echo   install4JExecutable = %install4JExecutable%
 echo   scmConnection = %scmConnection%
 echo   scmUrl = %scmUrl%
 echo   distReposId = %distReposId%
@@ -127,7 +127,7 @@ mvn archetype:generate -B^
  "-DarchetypeArtifactId=%archetypeArtifactId%"^
  "-DarchetypeVersion=%archetypeVersion%"^
  "-DisaacVersion=%isaacVersion%"^
- "-Dinstall4jExecutable=%install4jExecutable%"^
+ "-Dinstall4JExecutable=%install4JExecutable%"^
  "-DscmConnection=%scmConnection%"^
  "-DscmUrl=%scmUrl%"^
  "-DdistReposId=%distReposId%"^

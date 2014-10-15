@@ -8,16 +8,17 @@
 <isaacAppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="${app.schema.location}">
 
+  <!-- This file is validated against a schema, thus the order
+       of each of these entries matters.  Do not change it without
+       also updating the corresponding schema. -->
+
   <!-- Archetype properties -->
   <archetypeGroupId>${archetype.group.id}</archetypeGroupId>
-  <archetypeArtifactId>${archetype.artifact.id}
-  <archetypeVersion>${archetype.version}
+  <archetypeArtifactId>${archetype.artifact.id}</archetypeArtifactId>
+  <archetypeVersion>${archetype.version}</archetypeVersion>
 
   <!-- ISAAC software version -->
   <isaacVersion>${isaac.version}</isaacVersion>
-
-  <!-- Install4j executable -->
-  <install4jExecutable>${install4j.executable}</install4jExecutable>
 
   <!-- Repositories for code and artifacts -->
   <scmConnection>${scm.connection}</scmConnection>
@@ -25,9 +26,9 @@
   <distReposId>${dist.repos.id}</distReposId>
   <distReposName>${dist.repos.name}</distReposName>
   <distReposUrl>${dist.repos.url}</distReposUrl>
-  <distReposSnapId>${dist.repos.snapId}</distReposSnapId>
-  <distReposSnap.name>${dist.repos.snap.name}</distReposSnap.name>
-  <distReposSnap.url>${dist.repos.snap.url}</distReposSnap.url>
+  <distReposSnapId>${dist.repos.snap.id}</distReposSnapId>
+  <distReposSnapName>${dist.repos.snap.name}</distReposSnapName>
+  <distReposSnapUrl>${dist.repos.snap.url}</distReposSnapUrl>
 
   <!-- Database version info -->
   <dbGroupId>${db.group.id}</dbGroupId>
@@ -53,7 +54,7 @@
   <previousReleaseVersion>${previous.release.version}</previousReleaseVersion>
   <releaseVersion>${release.version}</releaseVersion>
   <extensionNamespace>${extension.namespace}</extensionNamespace>
-  <changeSetUrl><${change.set.url}</changeSetUrl>
+  <changeSetUrl>${change.set.url}</changeSetUrl>
   <appSchemaLocation>${app.schema.location}</appSchemaLocation>
   <userSchemaLocation>${user.schema.location}</userSchemaLocation>
   <workflowServerUrl>${workflow.server.url}</workflowServerUrl>

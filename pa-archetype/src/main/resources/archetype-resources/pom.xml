@@ -34,7 +34,7 @@
 		<isaac.version>\${isaacVersion}</isaac.version>
 
         <!-- Install4j executable -->
-        <install4j.executable>\${install4jExecutable}</install4j.executable>
+        <install4j.executable>\${install4JExecutable}</install4j.executable>
 
         <!-- Repositories for code and artifacts -->
         <scm.connection>\${scmConnection}</scm.connection>
@@ -73,8 +73,8 @@
         <change.set.url>\${changeSetUrl}</change.set.url>
         <app.schema.location>\${appSchemaLocation}</app.schema.location>
         <user.schema.location>\${userSchemaLocation}</user.schema.location>
-        <worfklow.server.url>\${workflowServerUrl}</worfklow.server.url>
-        <worfklow.server.deployment.id>\${workflowServerDeploymentId}</worfklow.server.deployment.id>
+        <workflow.server.url>\${workflowServerUrl}</workflow.server.url>
+        <workflow.server.deployment.id>\${workflowServerDeploymentId}</workflow.server.deployment.id>
 
         <!-- Path info -->
         <default.edit.path.name>\${defaultEditPathName}</default.edit.path.name>
@@ -82,7 +82,7 @@
         <default.view.path.name>\${defaultViewPathName}</default.view.path.name>
         <default.view.path.uuid>\${defaultViewPathUuid}</default.view.path.uuid>
         <workflow.promotion.path.name>\${workflowPromotionPathName}</workflow.promotion.path.name>
-        <workflow.promotion.path.uuid>\${workflowPromotionPathUui}</workflow.promotion.path.uuid>
+        <workflow.promotion.path.uuid>\${workflowPromotionPathUuid}</workflow.promotion.path.uuid>
 
         <!-- Generic project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -90,9 +90,11 @@
 	</properties>
 
 	<scm>
-		<connection>${scm.connection}</connection>
-		<developerConnection>${scm.connection}</developerConnection>
-		<url>${scm.url}</url>
+        <!-- The archetype must leave these like this to avoid
+        interpolation of values from archetype project itself -->
+		<connection>\${scmConnection}</connection>
+		<developerConnection>\${scmConnection}</developerConnection>
+		<url>\${scmUrl}</url>
 	</scm>
 	<distributionManagement>
 		<!-- I don't normally define these here, but the -D overrides are being problematic 
@@ -110,6 +112,12 @@
 	</distributionManagement>
 
 	<build>
+        <resources>
+          <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+          </resource>
+        </resources>
 		<plugins>
 
 			<!-- Java version 1.8 -->
