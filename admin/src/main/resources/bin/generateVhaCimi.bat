@@ -20,6 +20,9 @@ set archetypeVersion=1.0-Sprint_15-SNAPSHOT
 :: ISAAC software version
 set isaacVersion=1.0-Sprint_15-SNAPSHOT
 
+:: Install4j executable
+set install4jExecutable=C:/Program Files/install4j5/bin/install4jc.exe
+
 :: Repositories for code and artifacts
 set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA.git
 set scmUrl=https://github.com/Apelon-VA/ISAAC-PA-VHA
@@ -77,6 +80,7 @@ echo   archetypeGroupId = %archetypeGroupId%
 echo   archetypeArtifactId = %archetypeArtifactId%
 echo   archetypeVersion = %archetypeVersion%
 echo   isaacVersion = %isaacVersion%
+echo   install4jExecutable = %install4jExecutable%
 echo   scmConnection = %scmConnection%
 echo   scmUrl = %scmUrl%
 echo   distReposId = %distReposId%
@@ -123,6 +127,7 @@ mvn archetype:generate -B^
  "-DarchetypeArtifactId=%archetypeArtifactId%"^
  "-DarchetypeVersion=%archetypeVersion%"^
  "-DisaacVersion=%isaacVersion%"^
+ "-Dinstall4jExecutable=%install4jExecutable%"^
  "-DscmConnection=%scmConnection%"^
  "-DscmUrl=%scmUrl%"^
  "-DdistReposId=%distReposId%"^

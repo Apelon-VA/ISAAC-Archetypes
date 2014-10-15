@@ -10,6 +10,9 @@
     <!-- ISAAC software version -->
     <requiredProperty key="isaacVersion" />
 
+    <!-- Install4j executable -->
+    <requiredProperty key="install4jExecutable" />
+
     <!-- Repositories for code and artifacts -->
     <requiredProperty key="scmConnection" />
     <requiredProperty key="scmUrl" />

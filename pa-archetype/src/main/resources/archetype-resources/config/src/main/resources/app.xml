@@ -16,6 +16,9 @@
   <!-- ISAAC software version -->
   <isaacVersion>${isaac.version}</isaacVersion>
 
+  <!-- Install4j executable -->
+  <install4jExecutable>${install4j.executable}</install4jExecutable>
+
   <!-- Repositories for code and artifacts -->
   <scmConnection>${scm.connection}</scmConnection>
   <scmUrl>${scm.url}</scmUrl>
