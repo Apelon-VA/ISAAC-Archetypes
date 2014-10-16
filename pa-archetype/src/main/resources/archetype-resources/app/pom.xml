@@ -206,7 +206,7 @@
 											<groupId>${db.group.id}</groupId>
 											<artifactId>${db.artifact.id}</artifactId>
 											<version>${db.version}</version>
-											<classifier>{db.classifier}</classifier>
+											<classifier>${db.classifier}</classifier>
 											<type>${db.type}</type>
 											<outputDirectory>${project.build.directory}/isaac-app/</outputDirectory>
 										</artifactItem>
