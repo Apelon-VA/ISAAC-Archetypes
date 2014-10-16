@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0"?>
 <!-- Logback (SLF) configuration file -->
 <configuration>
@@ -10,7 +7,7 @@
 	</contextListener>
 
 	<!-- Only prints INFO and worse -->
-	<${artifactId}ender name="FILE-NORMAL" class="ch.qos.logback.core.FileAppender">
+	<appender name="FILE-NORMAL" class="ch.qos.logback.core.FileAppender">
 		<file>isaac.log</file>
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>INFO</level>
@@ -18,10 +15,10 @@
 		<encoder>
 			<pattern>%date %-5level %-22([%thread]) %-32([%logger{30}]) %file:%line - %msg%n</pattern>
 		</encoder>
-	</${artifactId}ender>
+	</appender>
 
 	<!-- Prints everything -->
-	<${artifactId}ender name="FILE-DEBUG" class="ch.qos.logback.core.FileAppender">
+	<appender name="FILE-DEBUG" class="ch.qos.logback.core.FileAppender">
 		<file>isaac-debug.log</file>
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>TRACE</level>
@@ -29,10 +26,10 @@
 		<encoder>
 			<pattern>%date %-5level %-22([%thread]) %-32([%logger{30}]) %file:%line - %msg%n</pattern>
 		</encoder>
-	</${artifactId}ender>
+	</appender>
 
 	<!-- Only prints WARN and worse -->
-	<${artifactId}ender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+	<appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>WARN</level>
 		</filter>
@@ -40,10 +37,10 @@
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %file:%line - %msg%n</pattern>
 		</encoder>
-	</${artifactId}ender>
+	</appender>
 	
-	<!-- A Console ${artifactId}ender that prints DEBUG -->
-	<${artifactId}ender name="STDOUT-DEBUG" class="ch.qos.logback.core.ConsoleAppender">
+	<!-- A Console appender that prints DEBUG -->
+	<appender name="STDOUT-DEBUG" class="ch.qos.logback.core.ConsoleAppender">
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
 			<level>DEBUG</level>
 			<onMatch>ACCEPT</onMatch>
@@ -53,10 +50,10 @@
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %file:%line - %msg%n</pattern>
 		</encoder>
-	</${artifactId}ender>
+	</appender>
 	
-	<!-- A Console ${artifactId}ender that prints DEBUG -->
-	<${artifactId}ender name="STDOUT-INFO" class="ch.qos.logback.core.ConsoleAppender">
+	<!-- A Console appender that prints DEBUG -->
+	<appender name="STDOUT-INFO" class="ch.qos.logback.core.ConsoleAppender">
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
 			<level>INFO</level>
 			<onMatch>ACCEPT</onMatch>
@@ -66,7 +63,7 @@
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %file:%line - %msg%n</pattern>
 		</encoder>
-	</${artifactId}ender>
+	</appender>
 
 	<!-- By default, all loggers in the system are set to WARN or worse.  To enable more verbose logging
 	for a specific logger, or a logger package - define a 'logger' configuration as below, with the desired level. -->
@@ -74,14 +71,16 @@
 	<logger name="gov.va.legoEdit" level="TRACE" />
 	<!--logger name="gov.va.oia" level="TRACE"/-->
 	<logger name="org.ihtsdo" level="INFO" />
+	<logger name="css" level="ERROR" /> <!-- JavaFX has some bugs that are causing it to be noisy about css errors... -->
+	<logger name="com.mchange.v2.c3p0" level="INFO"/>
 
 	<!-- Set the root logger (all loggers not specified above) at a WARN level -->
 	<root level="WARN">
-		<${artifactId}ender-ref ref="FILE-DEBUG" />
-		<${artifactId}ender-ref ref="FILE-NORMAL" />
-		<${artifactId}ender-ref ref="STDERR" />
-		<!-- The two ${artifactId}enders below can be enabled if you desire INFO or DEBUG log output on the console. -->
-		<!--${artifactId}ender-ref ref="STDOUT-DEBUG" /-->
-		<!--${artifactId}ender-ref ref="STDOUT-INFO" /-->
+		<appender-ref ref="FILE-DEBUG" />
+		<appender-ref ref="FILE-NORMAL" />
+		<appender-ref ref="STDERR" />
+		<!-- The two appenders below can be enabled if you desire INFO or DEBUG log output on the console. -->
+		<!--appender-ref ref="STDOUT-DEBUG" /-->
+		<!--appender-ref ref="STDOUT-INFO" /-->
 	</root>
 </configuration>
