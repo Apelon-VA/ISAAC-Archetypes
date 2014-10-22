@@ -21,11 +21,11 @@ set archetypeVersion=1.0-Sprint_15-SNAPSHOT
 set isaacVersion=1.0-Sprint_15-SNAPSHOT
 
 :: Install4j executable
-set install4JExecutable=C:/Program Files/install4j5/bin/install4jc.exe
+set install4JExecutable=install4jc
 
 :: Repositories for code and artifacts
-set scmConnection=scm:git:git@github.com:Apelon-VA/ISAAC-PA-VHA-CIMI.git
-set scmUrl=https://github.com/Apelon-VA/ISAAC-PA-VHA-IMI
+set scmConnection=scm:git:ssh://csfe.aceworkspace.net:29418/isaac-pa-vha-cimi
+set scmUrl=https://csfe.aceworkspace.net/gerrit/gitweb?p=isaac-pa-vha-cimi.git;tflink=projects.veterans_administration_project/scm.ISAAC_PA_VHA_CIMI
 set distReposId=maestro-deploy
 set distReposName=VA Public Releases Repository
 set distReposUrl=http://va-archiva-host:8082/archiva/repository/va-releases/
