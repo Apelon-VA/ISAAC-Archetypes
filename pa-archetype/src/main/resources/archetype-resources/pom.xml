@@ -113,12 +113,6 @@
 	</distributionManagement>
 
 	<build>
-        <resources>
-          <resource>
-            <directory>src/main/resources</directory>
-            <filtering>true</filtering>
-          </resource>
-        </resources>
 		<plugins>
 
 			<!-- Java version 1.8 -->

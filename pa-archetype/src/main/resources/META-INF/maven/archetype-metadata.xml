@@ -69,7 +69,7 @@
       <directory></directory>
       <includes>
         <include>.gitignore</include>
-        <include>LICENSE</include>
+        <include>LICENSE.txt</include>
         <include>README.md</include>
       </includes>
     </fileSet>
