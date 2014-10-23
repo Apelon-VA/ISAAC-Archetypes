@@ -5,6 +5,9 @@
 ::
 :: NOTE: the archetype project must be built locally
 :: NOTE: the "mvn" command must be in the path
+:: NOTE maven archetypes are completely broken if you have your local .m2 folder installed anywhere other than default
+:: http://jira.codehaus.org/browse/ARCHETYPE-283 - you CANNOT set <localRepository>D:\differentrepo</localRepository>
+:: in your maven settings.xml file if you intend to use an archetype.
 ::
 
 :: Artifact to generate project for
