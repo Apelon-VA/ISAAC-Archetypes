@@ -60,7 +60,7 @@ set changeSetUrl=https://csfe.aceworkspace.net/svn/repos/vha-cimi-changesets
 set appSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/isaac-app/src/main/resources/xsd/AppConfigSchema.xsd
 set userSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/otf-util/src/main/resources/xsd/UserGenerationSchema.xsd
 set workflowServerUrl=http://162.243.255.43:8080/kie-wb/
-set workflowServerDeploymentId=gov.va.isaac.demo:terminology-authoring:1.4
+set workflowServerDeploymentId=gov.va.isaac.demo:terminology-authoring:1.5
  
 :: Path Information
 ::  NOTE: these paths must exist in the corresponding database
