@@ -39,6 +39,13 @@
 			<version>${isaac.version}</version>
 		</dependency>
 
+		<!-- ISAAC Content Request. -->
+		<dependency>
+			<groupId>gov.va.isaac.modules</groupId>
+			<artifactId>content-request</artifactId>
+			<version>${isaac.version}</version>
+		</dependency>
+
 		<!-- ISAAC Taxonomy View. -->
 		<dependency>
 			<groupId>gov.va.isaac.modules</groupId>
