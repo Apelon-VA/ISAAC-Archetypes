@@ -49,6 +49,7 @@
     <requiredProperty key="releaseVersion" />
     <requiredProperty key="extensionNamespace" />
     <requiredProperty key="changeSetUrl" />
+    <requiredProperty key="changeSetUrlType" />
     <requiredProperty key="appSchemaLocation" />
     <requiredProperty key="userSchemaLocation" />
     <requiredProperty key="workflowServerUrl" />

@@ -63,6 +63,7 @@
   <releaseVersion>${releaseVersion}</releaseVersion>
   <extensionNamespace>${extensionNamespace}</extensionNamespace>
   <changeSetUrl>${changeSetUrl}</changeSetUrl>
+  <changeSetUrlType>${changeSetUrlType}</changeSetUrlType>
   <appSchemaLocation>${appSchemaLocation}</appSchemaLocation>
   <userSchemaLocation>${userSchemaLocation}</userSchemaLocation>
   <workflowServerUrl>${workflowServerUrl}</workflowServerUrl>

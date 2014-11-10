@@ -72,6 +72,7 @@
         <release.version>\${releaseVersion}</release.version>
         <extension.namespace>\${extensionNamespace}</extension.namespace>
         <change.set.url>\${changeSetUrl}</change.set.url>
+        <change.set.url.type>\${changeSetUrlType}</change.set.url.type>
         <app.schema.location>\${appSchemaLocation}</app.schema.location>
         <user.schema.location>\${userSchemaLocation}</user.schema.location>
         <workflow.server.url>\${workflowServerUrl}</workflow.server.url>
