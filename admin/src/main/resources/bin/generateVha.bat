@@ -26,12 +26,6 @@ set install4JExecutable=install4jc
 :: Repositories for code and artifacts
 set scmConnection=scm:git:ssh://csfe.aceworkspace.net:29418/isaac-pa-vha
 set scmUrl=https://csfe.aceworkspace.net/gerrit/gitweb?p=isaac-pa-vha.git;tflink=projects.veterans_administration_project/scm.ISAAC_PA_VHA
-set distReposId=maestro-deploy
-set distReposName=VA Public Releases Repository
-set distReposUrl=http://va-archiva-host:8082/archiva/repository/va-releases/
-set distReposSnapId=maestro-deploy
-set distReposSnapName=VA Public Snapshots Repository
-set distReposSnapUrl=http://va-archiva-host:8082/archiva/repository/va-snapshots/
 
 :: Database version info
 set dbGroupId=gov.va.isaac.db
@@ -39,11 +33,6 @@ set dbArtifactId=solor-all
 set dbVersion=2014.10.17
 set dbClassifier=active-only
 set dbType=bdb.zip
-
-:: Users version info - PLACEHOLDER
-:: set usersGroupId=gov.va.isaac.users
-:: set usersArtifactId=vha-users
-:: set usersVersion=0.0.1-SNAPSHOT
 
 :: Drools version info - PLACEHOLDER
 :: set droolsGroupId=gov.va.isaac.drools
@@ -85,20 +74,11 @@ echo   isaacVersion = %isaacVersion%
 echo   install4JExecutable = %install4JExecutable%
 echo   scmConnection = %scmConnection%
 echo   scmUrl = %scmUrl%
-echo   distReposId = %distReposId%
-echo   distReposName = %distReposName%
-echo   distReposUrl = %distReposUrl%
-echo   distReposSnapId = %distReposSnapId%
-echo   distReposSnapName = %distReposSnapName%
-echo   distReposSnapUrl = %distReposSnapUrl%
 echo   dbGroupId = %dbGroupId%
 echo   dbArtifactId = %dbArtifactId%
 echo   dbVersion = %dbVersion%
 echo   dbClassifier = %dbClassifier%
 echo   dbType = %dbType%
-:: echo   usersGroupId = %usersGroupId%
-:: echo   usersArtifactId = %usersArtifactId%
-:: echo   usersVersion = %usersVersion%
 :: echo   droolsGroupId = %droolsGroupId%
 :: echo   droolsArtifactId = %droolsArtifactId%
 :: echo   droolsVersion = %droolsVersion%
@@ -134,12 +114,6 @@ mvn archetype:generate -B^
  "-Dinstall4JExecutable=%install4JExecutable%"^
  "-DscmConnection=%scmConnection%"^
  "-DscmUrl=%scmUrl%"^
- "-DdistReposId=%distReposId%"^
- "-DdistReposName=%distReposName%"^
- "-DdistReposUrl=%distReposUrl%"^
- "-DdistReposSnapId=%distReposSnapId%"^
- "-DdistReposSnapName=%distReposSnapName%"^
- "-DdistReposSnapUrl=%distReposSnapUrl%"^
  "-DdbGroupId=%dbGroupId%"^
  "-DdbArtifactId=%dbArtifactId%"^
  "-DdbVersion=%dbVersion%"^
@@ -162,9 +136,6 @@ mvn archetype:generate -B^
  "-DworkflowPromotionPathName=%workflowPromotionPathName%"^
  "-DworkflowPromotionPathUuid=%workflowPromotionPathUuid%"
 
-:: "-DusersGroupId = %usersGroupId%"^
-:: "-DusersArtifactId = %usersArtifactId%"^
-:: "-DusersVersion = %usersVersion%"^
 :: "-DdroolsGroupId = %droolsGroupId%"^
 :: "-DdroolsArtifactId = %droolsArtifactId%"^
 :: "-DdroolsVersion = %droolsVersion%"^

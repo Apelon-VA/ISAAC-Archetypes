@@ -30,12 +30,6 @@
   <!-- Repositories for code and artifacts -->
   <scmConnection>${scmConnection}</scmConnection>
   <scmUrl>${scmUrl}</scmUrl>
-  <distReposId>${distReposId}</distReposId>
-  <distReposName>${distReposName}</distReposName>
-  <distReposUrl>${distReposUrl}</distReposUrl>
-  <distReposSnapId>${distReposSnapId}</distReposSnapId>
-  <distReposSnapName>${distReposSnapName}</distReposSnapName>
-  <distReposSnapUrl>${distReposSnapUrl}</distReposSnapUrl>
 
   <!-- Database version info -->
   <dbGroupId>${dbGroupId}</dbGroupId>
@@ -43,12 +37,6 @@
   <dbVersion>${dbVersion}</dbVersion>
   <dbClassifier>${dbClassifier}</dbClassifier>
   <dbType>${dbType}</dbType>
-
-  <!-- Users version info - PLACEHOLDER
-  <usersGroupId>${users.group.id}</usersGroupId>
-  <usersArtifactid>${users.artifactid}</usersArtifactid>
-  <usersVersion>${users.version}</usersVersion>
-   -->
 
   <!-- Drools version info - PLACEHOLDER
   <droolsGroupId>${drools.group.id}</droolsGroupId>

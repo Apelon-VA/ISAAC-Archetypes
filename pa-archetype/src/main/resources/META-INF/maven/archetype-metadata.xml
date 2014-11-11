@@ -16,12 +16,6 @@
     <!-- Repositories for code and artifacts -->
     <requiredProperty key="scmConnection" />
     <requiredProperty key="scmUrl" />
-    <requiredProperty key="distReposId" />
-    <requiredProperty key="distReposName" />
-    <requiredProperty key="distReposUrl" />
-    <requiredProperty key="distReposSnapId" />
-    <requiredProperty key="distReposSnapName" />
-    <requiredProperty key="distReposSnapUrl" />
 
     <!-- Database version info -->
     <requiredProperty key="dbGroupId" />
@@ -30,12 +24,7 @@
     <requiredProperty key="dbClassifier" />
     <requiredProperty key="dbType" />
 
-    <!-- Users version info - PLACEHOLDER
-    <requiredProperty key="usersGroupId" />
-    <requiredProperty key="usersArtifactId" />
-    <requiredProperty key="usersVersion" />
-    -->
-    
+
     <!-- Drools version info - PLACEHOLDER
     <requiredProperty key="droolsGroupId" />
     <requiredProperty key="droolsArtifactId" />
