@@ -46,6 +46,13 @@
 			<version>${isaac.version}</version>
 		</dependency>
 
+		<!-- ISAAC Classifier. -->
+		<dependency>
+			<groupId>gov.va.isaac.modules</groupId>
+			<artifactId>isaac-classifier</artifactId>
+			<version>${isaac.version}</version>
+		</dependency>
+
 		<!-- ISAAC Taxonomy View. -->
 		<dependency>
 			<groupId>gov.va.isaac.modules</groupId>
@@ -296,7 +303,17 @@
 								</configuration>
 							</execution>
 
-							<!-- TODO this will be where we process changesets.... -->
+							<!-- Process any existing changeset (*.eccs) files into the DB -->
+							<execution>
+								<id>process-changesets</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>process-changesets</goal>
+								</goals>
+								<configuration>
+									<userProfileFolderLocation>${project.build.directory}/isaac-app/profiles/</userProfileFolderLocation>
+								</configuration>
+							</execution>
 
 							<execution>
 								<id>shutdown</id>
