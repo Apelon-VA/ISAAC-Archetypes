@@ -50,6 +50,7 @@
   <previousReleaseVersion>${previousReleaseVersion}</previousReleaseVersion>
   <releaseVersion>${releaseVersion}</releaseVersion>
   <extensionNamespace>${extensionNamespace}</extensionNamespace>
+  <moduleId>${moduleId}</moduleId>
   <changeSetUrl>${changeSetUrl}</changeSetUrl>
   <changeSetUrlType>${changeSetUrlType}</changeSetUrlType>
   <appSchemaLocation>${appSchemaLocation}</appSchemaLocation>

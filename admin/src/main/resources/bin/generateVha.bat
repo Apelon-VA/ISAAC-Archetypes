@@ -30,7 +30,7 @@ set scmUrl=https://csfe.aceworkspace.net/gerrit/gitweb?p=isaac-pa-vha.git;tflink
 :: Database version info
 set dbGroupId=gov.va.isaac.db
 set dbArtifactId=solor-all
-set dbVersion=2014.10.17
+set dbVersion=2014.11.12
 set dbClassifier=active-only
 set dbType=bdb.zip
 
@@ -45,6 +45,7 @@ set appTitle=VHA ISAAC App - ISAAC Toolkit (v0.15)
 set previousReleaseVersion=20140731
 set releaseVersion=20150131
 set extensionNamespace=1000161
+set moduleId=sampleModuleId
 set changeSetUrl=ssh://someuser@csfe.aceworkspace.net:29418/isaac_pa_demo_changesets
 set changeSetUrlType=GIT
 set appSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/isaac-app/src/main/resources/xsd/AppConfigSchema.xsd
@@ -87,6 +88,7 @@ echo   appTitle = %appTitle%
 echo   previousReleaseVersion = %previousReleaseVersion%
 echo   releaseVersion = %releaseVersion%
 echo   extensionNamespace = %extensionNamespace%
+echo   moduleId = %moduleId%
 echo   changeSetUrl = %changeSetUrl%
 echo   changeSetUrlType = %changeSetUrlType%
 echo   appSchemaLocation = %appSchemaLocation%
@@ -123,6 +125,7 @@ mvn archetype:generate -B^
  "-DpreviousReleaseVersion=%previousReleaseVersion%"^
  "-DreleaseVersion=%releaseVersion%"^
  "-DextensionNamespace=%extensionNamespace%"^
+ "-DmoduleId=%moduleId%"^
  "-DchangeSetUrl=%changeSetUrl%"^
  "-DchangeSetUrlType=%changeSetUrlType%"^
  "-DappSchemaLocation=%appSchemaLocation%"^

@@ -33,7 +33,7 @@ scmUrl=https://github.com/Apelon-VA/ISAAC-PA-VHA
 #  Database version info
 dbGroupId=gov.va.isaac.db
 dbArtifactId=solor-all
-dbVersion=2014.10.17
+dbVersion=2014.11.12
 dbClassifier=active-only
 dbType=bdb.zip
 
@@ -48,6 +48,7 @@ appTitle=VHA ISAAC App - ISAAC Toolkit (v0.15)
 previousReleaseVersion=20140731
 releaseVersion=20150131
 extensionNamespace=1000161
+moduleId=sampleModuleId
 changeSetUrl=ssh://someuser@csfe.aceworkspace.net:29418/isaac_pa_demo_changesets
 changeSetUrlType=GIT
 appSchemaLocation=https://raw.githubusercontent.com/Apelon-VA/ISAAC/master/isaac-app/src/main/resources/xsd/AppConfigSchema.xsd
@@ -90,6 +91,7 @@ echo "  appTitle = $appTitle"
 echo "  previousReleaseVersion = $previousReleaseVersion"
 echo "  releaseVersion = $releaseVersion"
 echo "  extensionNamespace = $extensionNamespace"
+echo "  moduleId = $moduleId"
 echo "  changeSetUrl = $changeSetUrl"
 echo "  changeSetUrlType = $changeSetUrlType"
 echo "  defaultEditPathName = $defaultEditPathName"
@@ -125,6 +127,7 @@ mvn archetype:generate -B \
  "-DpreviousReleaseVersion=$previousReleaseVersion" \
  "-DreleaseVersion=$releaseVersion" \
  "-DextensionNamespace=$extensionNamespace" \
+ "-DmoduleId=$moduleId" \
  "-DchangeSetUrl=$changeSetUrl" \
  "-DchangeSetUrlType=$changeSetUrlType" \
  "-DdefaultEditPathName=$defaultEditPathName" \

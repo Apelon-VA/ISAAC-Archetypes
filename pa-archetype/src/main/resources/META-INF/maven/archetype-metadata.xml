@@ -37,6 +37,7 @@
     <requiredProperty key="previousReleaseVersion" />
     <requiredProperty key="releaseVersion" />
     <requiredProperty key="extensionNamespace" />
+    <requiredProperty key="moduleId" />
     <requiredProperty key="changeSetUrl" />
     <requiredProperty key="changeSetUrlType" />
     <requiredProperty key="appSchemaLocation" />
