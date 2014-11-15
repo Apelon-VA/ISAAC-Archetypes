@@ -14,3 +14,4 @@ To add a new variable to this archetype, do so in the following 5 places
 Also, need to edit the XML schema for app.xml
 * isaac-app/src/main/resources/xsd/AppConfigSchema.xsd
 * Also see IsaacAppConfigI.java
+* Also see IsaacAppConfigWrapper.java (copyHack)

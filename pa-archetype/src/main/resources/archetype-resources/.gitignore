@@ -19,5 +19,10 @@ berkeley-db/
 berkeley-db*/
 legoData.db/
 workflowDB/
+drools-rules/
+profiles/
+*.bdb/
 
 scenicView.properties/
+.idea
+isaac-pa-parent.iml

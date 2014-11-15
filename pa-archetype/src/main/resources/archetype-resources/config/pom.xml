@@ -15,4 +15,25 @@
 	<name>ISAAC Application Configuration</name>
 	<description>Default properties used by ISAAC.</description>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>gov.va.isaac.modules</groupId>
+				<artifactId>mojos</artifactId>
+				<version>${isaac.version}</version>
+				<executions>
+					<execution>
+						<id>validate-configuration</id>
+						<goals>
+							<goal>validate-configuration</goal>
+						</goals>
+
+						<configuration>
+							<resourcesFolderPath>${basedir}/src/main/resources</resourcesFolderPath>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

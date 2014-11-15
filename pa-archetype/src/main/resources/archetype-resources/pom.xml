@@ -33,27 +33,19 @@
         <!-- ISAAC software version -->
 		<isaac.version>\${isaacVersion}</isaac.version>
 
+        <!-- Install4j executable -->
+        <install4j.executable>\${install4JExecutable}</install4j.executable>
+
         <!-- Repositories for code and artifacts -->
         <scm.connection>\${scmConnection}</scm.connection>
         <scmurl>\${scmUrl}</scmurl>
-        <dist.repos.id>\${distReposId}</dist.repos.id>
-        <dist.repos.name>\${distReposName}</dist.repos.name>
-        <dist.repos.url>\${distReposUrl}</dist.repos.url>
-        <dist.repos.snap.id>\${distReposSnapId}</dist.repos.snap.id>
-        <dist.repos.snap.name>\${distReposSnapName}</dist.repos.snap.name>
-        <dist.repos.snap.url>\${distReposSnapUrl}</dist.repos.snap.url>
 
         <!-- Database version info -->
-		<db.group.id>\${dbGroupId}</db.group.id>
-		<db.artifact.id>\${dbArtifactId}</db.artifact.id>
-		<db.version>\${dbVersion}</db.version>
-		<db.classifier>\${dbClassifier}</db.classifier>
-
-        <!-- Users version info - PLACEHOLDER
-        <users.group.id>\${usersGroupId}</users.group.id>
-        <users.artifact.id>\${usersArtifactId}</users.artifact.id>
-        <users.version>\${usersVersion}</users.version>
-        -->
+        <db.group.id>\${dbGroupId}</db.group.id>
+        <db.artifact.id>\${dbArtifactId}</db.artifact.id>
+        <db.version>\${dbVersion}</db.version>
+        <db.classifier>\${dbClassifier}</db.classifier>
+        <db.type>\${dbType}</db.type>
         
         <!-- Drools version info - PLACEHOLDER
         <drools.group.id>\${droolsGroupId}</drools.group.id>
@@ -67,11 +59,13 @@
         <previous.release.version>\${previousReleaseVersion}</previous.release.version>
         <release.version>\${releaseVersion}</release.version>
         <extension.namespace>\${extensionNamespace}</extension.namespace>
+        <module.id>\${moduleId}</module.id>
         <change.set.url>\${changeSetUrl}</change.set.url>
+        <change.set.url.type>\${changeSetUrlType}</change.set.url.type>
         <app.schema.location>\${appSchemaLocation}</app.schema.location>
         <user.schema.location>\${userSchemaLocation}</user.schema.location>
-        <worfklow.server.url>\${workflowServerUrl}</worfklow.server.url>
-        <worfklow.server.deployment.id>\${workflowServerDeploymentId}</worfklow.server.deployment.id>
+        <workflow.server.url>\${workflowServerUrl}</workflow.server.url>
+        <workflow.server.deployment.id>\${workflowServerDeploymentId}</workflow.server.deployment.id>
 
         <!-- Path info -->
         <default.edit.path.name>\${defaultEditPathName}</default.edit.path.name>
@@ -79,7 +73,7 @@
         <default.view.path.name>\${defaultViewPathName}</default.view.path.name>
         <default.view.path.uuid>\${defaultViewPathUuid}</default.view.path.uuid>
         <workflow.promotion.path.name>\${workflowPromotionPathName}</workflow.promotion.path.name>
-        <workflow.promotion.path.uuid>\${workflowPromotionPathUui}</workflow.promotion.path.uuid>
+        <workflow.promotion.path.uuid>\${workflowPromotionPathUuid}</workflow.promotion.path.uuid>
 
         <!-- Generic project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -87,25 +81,12 @@
 	</properties>
 
 	<scm>
-		<connection>${scm.connection}</connection>
-		<developerConnection>${scm.connection}</developerConnection>
-		<url>${scm.url}</url>
+        <!-- The archetype must leave these like this to avoid
+        interpolation of values from archetype project itself -->
+		<connection>\${scmConnection}</connection>
+		<developerConnection>\${scmConnection}</developerConnection>
+		<url>\${scmUrl}</url>
 	</scm>
-	<distributionManagement>
-		<!-- I don't normally define these here, but the -D overrides are being problematic 
-			on the CI server... -->
-		<repository>
-			<id>${dist.repos.id}</id>
-			<name>${dist.repos.name}</name>
-			<url>${dist.repos.url}</url>
-		</repository>
-		<snapshotRepository>
-			<id>${dist.repos.snap.id}</id>
-			<name>${dist.repos.snap.name}</name>
-			<url>${dist.repos.snap.url}</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<build>
 		<plugins>
 
