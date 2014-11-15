@@ -1,6 +1,8 @@
-${groupId}
-========--
+${project.groupId}
+=================
 
-Project for assembling the ISAAC application.  
+Project for assembling the ISAAC application for a particular environment.  
 
-See the top level pom of the generated project for all configuration settings.s
+For further configuration see
+* Top level pom.xml 
+* config/src/main/resources/users.xml - REQUIRED

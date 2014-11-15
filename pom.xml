@@ -4,7 +4,7 @@
 
   <groupId>gov.va.isaac.archetypes</groupId>
   <artifactId>isaac-archetypes-parent</artifactId>
-  <version>1.0-Sprint_15-SNAPSHOT</version>
+  <version>1.0-Sprint_16-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>ISAAC Archetypes Parent</name>
@@ -31,7 +31,7 @@
     <connection>scm:git:git@github.com:Apelon-VA/ISAAC-Archetypes.git</connection>
     <developerConnection>scm:git:git@github.com:Apelon-VA/ISAAC-Archetypes.git</developerConnection>
     <url>https://github.com/Apelon-VA/ISAAC-Archetypes</url>
-    <tag>vha</tag>
+    <tag>develop</tag>
   </scm>
   <distributionManagement>
     <!-- I don't normally define these here, but the -D overrides are being problematic 

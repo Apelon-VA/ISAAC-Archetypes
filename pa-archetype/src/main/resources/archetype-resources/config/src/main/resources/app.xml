@@ -8,35 +8,35 @@
 <isaacAppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="${app.schema.location}">
 
+  <!-- This file is validated against a schema, thus the order
+       of each of these entries matters.  Do not change it without
+       also updating the corresponding schema. 
+       
+       NOTE: there is also now a validation routine so this
+       file must use archetype parameters instead of pom.xml
+       parameters - meaning that if top-level pom.xml parameters
+       are changed after archetype is run, this file will also
+       need to be udpated.
+       -->
+
   <!-- Archetype properties -->
-  <archetypeGroupId>${archetype.group.id}</archetypeGroupId>
-  <archetypeArtifactId>${archetype.artifact.id}
-  <archetypeVersion>${archetype.version}
+  <archetypeGroupId>${archetypeGroupId}</archetypeGroupId>
+  <archetypeArtifactId>${archetypeArtifactId}</archetypeArtifactId>
+  <archetypeVersion>${archetypeVersion}</archetypeVersion>
 
   <!-- ISAAC software version -->
-  <isaacVersion>${isaac.version}</isaacVersion>
+  <isaacVersion>${isaacVersion}</isaacVersion>
 
   <!-- Repositories for code and artifacts -->
-  <scmConnection>${scm.connection}</scmConnection>
-  <scmUrl>${scm.url}</scmUrl>
-  <distReposId>${dist.repos.id}</distReposId>
-  <distReposName>${dist.repos.name}</distReposName>
-  <distReposUrl>${dist.repos.url}</distReposUrl>
-  <distReposSnapId>${dist.repos.snapId}</distReposSnapId>
-  <distReposSnap.name>${dist.repos.snap.name}</distReposSnap.name>
-  <distReposSnap.url>${dist.repos.snap.url}</distReposSnap.url>
+  <scmConnection>${scmConnection}</scmConnection>
+  <scmUrl>${scmUrl}</scmUrl>
 
   <!-- Database version info -->
-  <dbGroupId>${db.group.id}</dbGroupId>
-  <dbArtifactId>${db.artifact.id}</dbArtifactId>
-  <dbVersion>${db.version}</dbVersion>
-  <dbClassifier>${db.classifier}</dbClassifier>
-
-  <!-- Users version info - PLACEHOLDER
-  <usersGroupId>${users.group.id}</usersGroupId>
-  <usersArtifactid>${users.artifactid}</usersArtifactid>
-  <usersVersion>${users.version}</usersVersion>
-   -->
+  <dbGroupId>${dbGroupId}</dbGroupId>
+  <dbArtifactId>${dbArtifactId}</dbArtifactId>
+  <dbVersion>${dbVersion}</dbVersion>
+  <dbClassifier>${dbClassifier}</dbClassifier>
+  <dbType>${dbType}</dbType>
 
   <!-- Drools version info - PLACEHOLDER
   <droolsGroupId>${drools.group.id}</droolsGroupId>
@@ -46,23 +46,25 @@
    -->
 
   <!-- Application properties -->
-  <applicationTitle>${gov.va.isaac.gui.App.title}</applicationTitle>
-  <previousReleaseVersion>${previous.release.version}</previousReleaseVersion>
-  <releaseVersion>${release.version}</releaseVersion>
-  <extensionNamespace>${extension.namespace}</extensionNamespace>
-  <changeSetUrl><${change.set.url}</changeSetUrl>
-  <appSchemaLocation>${app.schema.location}</appSchemaLocation>
-  <userSchemaLocation>${user.schema.location}</userSchemaLocation>
-  <workflowServerUrl>${workflow.server.url}</workflowServerUrl>
-  <workflowServerDeploymentId>${workflow.server.deployment.id}</workflowServerDeploymentId>
+  <applicationTitle>${appTitle}</applicationTitle>
+  <previousReleaseVersion>${previousReleaseVersion}</previousReleaseVersion>
+  <releaseVersion>${releaseVersion}</releaseVersion>
+  <extensionNamespace>${extensionNamespace}</extensionNamespace>
+  <moduleId>${moduleId}</moduleId>
+  <changeSetUrl>${changeSetUrl}</changeSetUrl>
+  <changeSetUrlType>${changeSetUrlType}</changeSetUrlType>
+  <appSchemaLocation>${appSchemaLocation}</appSchemaLocation>
+  <userSchemaLocation>${userSchemaLocation}</userSchemaLocation>
+  <workflowServerUrl>${workflowServerUrl}</workflowServerUrl>
+  <workflowServerDeploymentId>${workflowServerDeploymentId}</workflowServerDeploymentId>
 
   <!-- Path info -->
-  <defaultEditPathName>${default.edit.path.name}</defaultEditPathName>
-  <defaultEditPathUuid>${default.view.path.uuid}</defaultEditPathUuid>
-  <defaultViewPathName>${default.edit.path.name}</defaultViewPathName>
-  <defaultViewPathUuid>${default.view.path.uuid}</defaultViewPathUuid>
-  <workflowPromotionPathName>${workflow.promotion.path.name}</workflowPromotionPathName>
-  <workflowPromotionPathUuid>${workflow.promotion.path.uuid}</workflowPromotionPathUuid>
+  <defaultEditPathName>${defaultEditPathName}</defaultEditPathName>
+  <defaultEditPathUuid>${defaultViewPathUuid}</defaultEditPathUuid>
+  <defaultViewPathName>${defaultEditPathName}</defaultViewPathName>
+  <defaultViewPathUuid>${defaultViewPathUuid}</defaultViewPathUuid>
+  <workflowPromotionPathName>${workflowPromotionPathName}</workflowPromotionPathName>
+  <workflowPromotionPathUuid>${workflowPromotionPathUuid}</workflowPromotionPathUuid>
 
 </isaacAppConfig>
 	

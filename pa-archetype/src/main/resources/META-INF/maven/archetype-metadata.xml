@@ -10,28 +10,21 @@
     <!-- ISAAC software version -->
     <requiredProperty key="isaacVersion" />
 
+    <!-- Install4j executable -->
+    <requiredProperty key="install4JExecutable" />
+
     <!-- Repositories for code and artifacts -->
     <requiredProperty key="scmConnection" />
     <requiredProperty key="scmUrl" />
-    <requiredProperty key="distReposId" />
-    <requiredProperty key="distReposName" />
-    <requiredProperty key="distReposUrl" />
-    <requiredProperty key="distReposSnapId" />
-    <requiredProperty key="distReposSnapName" />
-    <requiredProperty key="distReposSnapUrl" />
 
     <!-- Database version info -->
     <requiredProperty key="dbGroupId" />
     <requiredProperty key="dbArtifactId" />
     <requiredProperty key="dbVersion" />
     <requiredProperty key="dbClassifier" />
+    <requiredProperty key="dbType" />
 
-    <!-- Users version info - PLACEHOLDER
-    <requiredProperty key="usersGroupId" />
-    <requiredProperty key="usersArtifactId" />
-    <requiredProperty key="usersVersion" />
-    -->
-    
+
     <!-- Drools version info - PLACEHOLDER
     <requiredProperty key="droolsGroupId" />
     <requiredProperty key="droolsArtifactId" />
@@ -44,7 +37,9 @@
     <requiredProperty key="previousReleaseVersion" />
     <requiredProperty key="releaseVersion" />
     <requiredProperty key="extensionNamespace" />
+    <requiredProperty key="moduleId" />
     <requiredProperty key="changeSetUrl" />
+    <requiredProperty key="changeSetUrlType" />
     <requiredProperty key="appSchemaLocation" />
     <requiredProperty key="userSchemaLocation" />
     <requiredProperty key="workflowServerUrl" />
@@ -65,7 +60,7 @@
       <directory></directory>
       <includes>
         <include>.gitignore</include>
-        <include>LICENSE</include>
+        <include>LICENSE.txt</include>
         <include>README.md</include>
       </includes>
     </fileSet>
@@ -77,22 +72,25 @@
           <directory>src/main/resources</directory>
           <includes>
             <include>**/*.xml</include>
+            <include>**/*.png</include>
           </includes>
         </fileSet>
       </fileSets>
     </module>
     <module id="app" dir="app" name="app">
       <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/assembly</directory>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
           <includes>
-            <include>**/*.xml</include>
+            <include>LICENSE.txt</include>
+            <include>logback.xml</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/resources</directory>
+          <directory>src/assembly</directory>
           <includes>
             <include>**/*.xml</include>
+            <include>**/*.MF</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
@@ -100,12 +98,6 @@
           <includes>
             <include>**/*.bat</include>
             <include>**/*.sh</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.png</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
