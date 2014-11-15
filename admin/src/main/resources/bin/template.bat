@@ -18,10 +18,10 @@ set version=  ... version of the project to generate ...
 :: Archetype version info
 set archetypeGroupId=gov.va.isaac.archetypes
 set archetypeArtifactId=isaac-archetypes-pa
-set archetypeVersion=1.0-Sprint_15-SNAPSHOT
+set archetypeVersion=1.0-Release_1.0
 
 :: ISAAC software version
-set isaacVersion=1.0-Sprint_15-SNAPSHOT
+set isaacVersion=1.8-Release_1.0
 
 :: Install4j executable
 set install4JExecutable=C:/Program Files/install4j5/bin/install4jc.exe

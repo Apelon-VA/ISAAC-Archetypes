@@ -18,10 +18,10 @@ version=... version of the project to generate ...
 #  Archetype version info
 archetypeGroupId=gov.va.isaac.archetypes
 archetypeArtifactId=isaac-archetypes-pa
-archetypeVersion=1.0-Sprint_15-SNAPSHOT
+archetypeVersion=1.0-Release_1.0
 
 #  ISAAC software version
-isaacVersion=1.0-Sprint_15-SNAPSHOT
+isaacVersion=1.8-Release_1.0
 
 #  Install4j executable
 install4JExecutable=/path/to/install4jc.exe
