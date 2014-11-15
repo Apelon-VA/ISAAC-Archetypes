@@ -31,7 +31,7 @@
     <connection>scm:git:git@github.com:Apelon-VA/ISAAC-Archetypes.git</connection>
     <developerConnection>scm:git:git@github.com:Apelon-VA/ISAAC-Archetypes.git</developerConnection>
     <url>https://github.com/Apelon-VA/ISAAC-Archetypes</url>
-    <tag>develop</tag>
+    <tag>master</tag>
   </scm>
   <distributionManagement>
     <!-- I don't normally define these here, but the -D overrides are being problematic 
