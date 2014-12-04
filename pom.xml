@@ -4,7 +4,7 @@
 
   <groupId>gov.va.isaac.archetypes</groupId>
   <artifactId>isaac-archetypes-parent</artifactId>
-  <version>1.0-Sprint_16-SNAPSHOT</version>
+  <version>Sprint_16.1</version>
   <packaging>pom</packaging>
 
   <name>ISAAC Archetypes Parent</name>
@@ -19,7 +19,7 @@
       <comments>Copyright Notice
     This is a work of the U.S. Government and is not subject to copyright
     protection in the United States. Foreign copyrights may apply.
-			</comments>
+      </comments>
     </license>
   </licenses>
 
@@ -28,25 +28,8 @@
   </properties>
 
   <scm>
-    <connection>scm:git:git@github.com:Apelon-VA/ISAAC-Archetypes.git</connection>
-    <developerConnection>scm:git:git@github.com:Apelon-VA/ISAAC-Archetypes.git</developerConnection>
     <url>https://github.com/Apelon-VA/ISAAC-Archetypes</url>
-    <tag>master</tag>
   </scm>
-  <distributionManagement>
-    <!-- I don't normally define these here, but the -D overrides are being problematic 
-      on the CI server... -->
-    <repository>
-      <id>maestro-deploy</id>
-      <name>VA Public Releases Repository</name>
-      <url>http://va-archiva-host:8082/archiva/repository/va-releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>maestro-deploy</id>
-      <name>VA Public Snapshots Repository</name>
-      <url>http://va-archiva-host:8082/archiva/repository/va-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
 
   <build>
     <plugins>
@@ -59,6 +42,25 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>external.atlassian.jgitflow</groupId>
+        <artifactId>jgitflow-maven-plugin</artifactId>
+        <version>1.0-m4.3</version>
+        <configuration>
+          <pushReleases>true</pushReleases>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <scmCommentPrefix>[jgitflow-plugin]</scmCommentPrefix>
+          <enableSshAgent>true</enableSshAgent>
+          <flowInitContext>
+            <masterBranchName>master</masterBranchName>
+            <developBranchName>develop</developBranchName>
+            <featureBranchPrefix>feature-</featureBranchPrefix>
+            <releaseBranchPrefix>release-</releaseBranchPrefix>
+            <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+          </flowInitContext>
         </configuration>
       </plugin>
 
